@@ -298,6 +298,42 @@ nav a:hover {
     background: linear-gradient(135deg, var(--highlight-hover), var(--highlight-color));
 }
 
+/* Button Variants */
+.cta-button.sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cta-button.sm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(58, 117, 196, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 15px; /* Reduced padding */
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .content-wrapper h1 {
+        font-size: 2.2rem;
+    }
+    
+    .card-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
 /* Section Common Styles */
 section {
     padding: 80px 20px;
