@@ -302,7 +302,7 @@ nav a:hover {
 .cta-button.sm {
     padding: 8px 20px;
     font-size: 0.9rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button.sm:hover {
@@ -313,24 +313,55 @@ nav a:hover {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     section {
-        padding: 40px 15px; /* Reduced padding */
+        padding: 40px 15px;
+        /* Reduced padding */
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        /* Smaller title */
         margin-bottom: 30px;
+        word-wrap: break-word;
+        /* Force wrap */
+        line-height: 1.2;
     }
 
-    .content-wrapper h1 {
-        font-size: 2.2rem;
+    .content-wrapper h1,
+    h1,
+    h2,
+    h3 {
+        font-size: 1.8rem !important;
+        /* Force scale down */
+        word-wrap: break-word;
+        hyphens: auto;
+        /* Clean breaks */
     }
-    
+
     .card-grid {
-        grid-template-columns: 1fr; /* Stack cards on mobile */
+        grid-template-columns: 1fr !important;
+        /* Strictly stack */
+        gap: 20px;
     }
-    
+
     .hero h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        word-break: break-word;
+    }
+
+    /* Fix any rigid widths */
+    .content-flex>*,
+    .card,
+    .btn-glass,
+    .cta-button {
+        min-width: 0 !important;
+        /* Allow shrinking */
+        width: 100%;
+        /* Take full width */
+        max-width: 100%;
+    }
+
+    .btn-list {
+        flex-direction: column;
     }
 }
 
