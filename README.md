@@ -4,6 +4,11 @@
 
 Benvenuti nel repository del sito web ufficiale del **GASPRA** (Gruppo Astrofili Pescaresi "RA"). Questo progetto ospita la vetrina digitale dell'associazione, dedicata alla divulgazione astronomica, alla ricerca e all'organizzazione di eventi osservativi nel Centro Italia.
 
+È possibile visualizzare un'anteprima del sito aggiornato in base a questa repository al seguente link: https://ft2801.github.io/Sito-Gaspra/
+
+Il sito originale è il seguente: https://www.gaspra.org
+
+
 ## 🔭 Descrizione del Progetto
 
 Questo sito web è stato recentemente modernizzato e ristrutturato per offrire una navigazione intuitiva, un design responsivo e un accesso facilitato all'archivio storico e alle nuove produzioni del gruppo. Il sito funge da punto di riferimento per soci e appassionati, fornendo informazioni su eventi, strumenti, tecniche di osservazione e gallerie fotografiche.
@@ -40,12 +45,6 @@ Il progetto segue una struttura ordinata per facilitare la manutenzione:
 
 *   Il file `.nojekyll` è incluso per evitare che GitHub Pages ignori file o cartelle che iniziano con underscore (se presenti) e per servire il sito come file statici puri.
 *   Per modifiche allo stile, intervenire principalmente su `css/style.css`. Le pagine interne in `pages/` fanno riferimento alle risorse risalendo di un livello (`../`).
-
-## 👥 Contatti e Credits
-
-**Gruppo Astrofili Pescaresi "RA"**
-*   Sito Web: [www.gaspra.org](https://www.gaspra.org)
-*   Partner: Forum Quasar - Dagli Appennini alle Stelle
 
 ---
 &copy; 1999-2025 GASPRA. Tutti i diritti riservati.
