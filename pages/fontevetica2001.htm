@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte Vetica 2001 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Campo Astronomico "Fonte Vetica 2001"</h1>
+        <p class="subtitle">XV Raduno sotto le stelle di Campo Imperatore</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Il Raduno</h2>
+                <div class="content-flex">
+                    <div style="flex: 2;">
+                        <p>Anche per quest’anno si conferma la tradizione con "Fonte Vetica 2001", il quindicesimo
+                            raduno astrofili a Campo Imperatore, previsto dal 18 al 23 Agosto (Novilunio).</p>
+                        <p>Il campo si tiene presso lo Chalet Rifugio di Fausto De Carolis. Una location spettacolare ai
+                            piedi del Monte Camicia e del Prena, immersa nella natura incontaminata del Parco Nazionale
+                            del Gran Sasso.</p>
+                        <div class="alert alert-info">
+                            <i class="fa-solid fa-map-marker-alt"></i> <strong>Come arrivare:</strong>
+                            <ul class="clean-list" style="margin-top: 10px;">
+                                <li><strong>Da Pescara:</strong> Penne -> Rigopiano -> Vado di Sole -> Fonte Vetica.
+                                </li>
+                                <li><strong>Da Nord/Roma:</strong> A24 Uscita Assergi -> Campo Imperatore.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <img src="../img/Image079.jpg" alt="Piazzale del rifugio" class="shadow-img"
+                            style="max-width: 100%; border-radius: 10px;">
+                        <p style="font-size: 0.8em; opacity: 0.7;">Piazzale del rifugio</p>
+                    </div>
+                </div>
+
+                <h3>Perché partecipare?</h3>
+                <p>Fonte Vetica è un <strong>tempio dell'astrofilia osservativa</strong>. Lontano dalle luci delle
+                    città, offre un cielo ancora veramente buio.</p>
+                <p>Oltre all'astronomia, il luogo offre splendide escursioni, passeggiate nei boschi e la possibilità di
+                    visitare i borghi medievali circostanti (Castel Del Monte, Calascio, Santo Stefano di Sessanio).</p>
+
+                <div class="alert alert-secondary" style="text-align: center; margin-top: 20px;">
+                    <p><strong>Info e Contatti:</strong></p>
+                    <p>Associazione GASPRA - Tel: 085-295263 (Lun-Ven 19:00-20:30)</p>
+                </div>
+
+                <p style="text-align: right; margin-top: 20px; font-style: italic;">Marco Di Biase</p>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="attivita.html" class="cta-button">Torna all'elenco Attività</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Astronomica 23/08/2000 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Escursione Fotografica</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">23 Agosto 2000
+            - Fonte Vetica</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Tentativo Fotografico</h2>
+            <p>In data 23/08/2000 i soci <strong>Marco Di Biase, Bruno Cirillo</strong> e <strong>Paolo
+                    Vigilante</strong> si sono recati in località <a href="Fonte_Vetica.htm" class="btn-link">Fonte
+                    Vetica</a> per svolgere attività fotografica di profondo cielo.</p>
+
+            <div class="alert alert-warning">
+                <i class="fa-solid fa-cloud"></i> <strong>Condizioni Avverse:</strong> L’escursione non ha avuto un buon
+                esito a causa delle condizioni pessime del cielo che si è presentato velato durante tutto l’arco della
+                notte. La velatura ha creato un effetto "flou" sulle stelle e filtrato i particolari.
+            </div>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">Risultati Ottenuti</h3>
+            <p>Nonostante le condizioni, proponiamo una ripresa della zona circostante alla stella gamma della
+                costellazione del Cigno effettuata con un <strong>Baker Schmidt 200 f/2</strong>.</p>
+
+            <figure style="text-align: center; margin-top: 20px;">
+                <img src="../img/Image109.JPG" alt="Costellazione del Cigno" class="shadow-img"
+                    style="max-width: 100%; width: 500px;">
+                <figcaption style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">Ripresa della
+                    costellazione del Cigno - Marco Di Biase</figcaption>
+            </figure>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

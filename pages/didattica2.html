@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didattica - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Didattica</h1>
+
+        <section>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="../img/galileo.gif" alt="Animazione Galileo"
+                    style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); max-width: 200px;">
+            </div>
+
+            <h2 class="section-title" style="font-size: 1.8rem;">Approfondimenti</h2>
+            <h3 style="text-align: center; color: var(--text-muted); font-size: 1rem; margin-bottom: 40px;">(Testi a
+                cura di Piero D'Incecco)</h3>
+
+            <div class="card-grid">
+                <a href="astronomia_da_tolomeo_a_newton.html" class="card card-link-block"
+                    style="text-decoration: none; display: block;">
+                    <h3>📜 Storia dell'Astronomia</h3>
+                    <p>Un viaggio dall'antichità alla rivoluzione scientifica: da Tolomeo a Newton.</p>
+                </a>
+
+                <a href="https://www.gaspra.org/relativit%C3%83%C2%A0.html" class="card card-link-block"
+                    style="text-decoration: none; display: block;">
+                    <h3>⚛️ La Relatività</h3>
+                    <p>Comprendere i concetti fondamentali della teoria di Einstein.</p>
+                </a>
+
+                <a href="buchineri.html" class="card card-link-block" style="text-decoration: none; display: block;">
+                    <h3>🕳️ I Buchi Neri</h3>
+                    <p>I misteri degli oggetti più densi dell'universo.</p>
+                </a>
+
+                <a href="bigbang.html" class="card card-link-block" style="text-decoration: none; display: block;">
+                    <h3>💥 Il Big Bang</h3>
+                    <p>L'origine dell'universo e la sua evoluzione.</p>
+                </a>
+
+                <a href="sistemasolare.html" class="card card-link-block"
+                    style="text-decoration: none; display: block;">
+                    <h3>☀️ Il Sistema Solare</h3>
+                    <p>Una panoramica sui nostri vicini cosmici.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

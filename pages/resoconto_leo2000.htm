@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonidi 2000 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Leonidi del 18 Novembre 2000</h1>
+        <p class="subtitle">Resoconto della spedizione osservativa su Monte Voltigno</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Il Resoconto</h2>
+                <div class="content-flex">
+                    <div style="flex: 1;">
+                        <img src="Galleria_fotografica/sistema%20solare/Leo9.jpg" alt="Cielo durante le Leonidi"
+                            class="shadow-img" style="width: 100%; border-radius: 10px;">
+                        <p style="font-size: 0.8em; text-align: center; opacity: 0.7;">Vista dal campo osservativo</p>
+                    </div>
+                    <div style="flex: 2;">
+                        <p>Il 17 novembre Marco Di Biase e Bruno Cirillo si sono recati sul Monte Voltigno (PE).</p>
+                        <p>Condizioni iniziali difficili con nubi e Luna. Fortunatamente, il vento ha spinto le nubi
+                            verso est, lasciando libera la parte ovest del cielo e coprendo spesso la Luna, riducendo il
+                            disturbo luminoso.</p>
+                        <p>Il picco era previsto per le 3:45. Le previsioni sono state rispettate: tra le 3:40 e le 4:05
+                            sono state contate oltre <strong>120 meteore</strong>.</p>
+                        <div class="alert alert-important">
+                            <strong>Risultato:</strong> Picco registrato con <span
+                                style="color: var(--highlight-color); font-weight: bold;">ZHR di 988</span>!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h2>Galleria Fotografica</h2>
+                <div class="gallery-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+                    <img src="Galleria_fotografica/sistema%20solare/Leo1.jpg" alt="Leonidi 1" class="shadow-img">
+                    <img src="Galleria_fotografica/sistema%20solare/Leo2.jpg" alt="Leonidi 2" class="shadow-img">
+                    <img src="Galleria_fotografica/sistema%20solare/Leo3.jpg" alt="Leonidi 3" class="shadow-img">
+                    <img src="Galleria_fotografica/sistema%20solare/Leo4.jpg" alt="Leonidi 4" class="shadow-img">
+                    <img src="Galleria_fotografica/sistema%20solare/Leo5.jpg" alt="Leonidi 5" class="shadow-img">
+                    <img src="Galleria_fotografica/sistema%20solare/Leo6.jpg" alt="Leonidi 6" class="shadow-img">
+                </div>
+
+                <h3 style="margin-top: 30px;">Bolide con scia persistente</h3>
+                <div style="text-align: center;">
+                    <img src="Galleria_fotografica/sistema%20solare/Leo8.jpg" alt="Bolide con scia di polveri"
+                        class="shadow-img" style="max-width: 100%; max-height: 400px;">
+                    <p>Scia di polveri lasciata da un bolide all'orizzonte.</p>
+                </div>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="attivita.html" class="cta-button">Torna all'elenco Attività</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

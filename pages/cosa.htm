@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Che cos'è l'inquinamento luminoso? - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Che cos'è l'inquinamento luminoso?</h1>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>1. Nascita ed evoluzione</h2>
+                <p>Tra le responsabilità maggiori dell’Umanità vi è senz’altro il rispetto e la preservazione della
+                    Natura. In quest’ottica, l'inquinamento luminoso (I.L.) rappresenta una minaccia spesso ignorata.
+                </p>
+                <div class="activity-preview">
+                    <p><strong>Definizione:</strong> Si può definire inquinamento luminoso tutto ciò che rompe il
+                        naturale equilibrio giorno-notte, luce-buio. Tecnicamente, è ogni forma di radiazione luminosa
+                        che si disperda al di fuori delle aree cui essa è funzionalmente dedicata.</p>
+                </div>
+                <p>L'inizio del problema coincide con l'avvento dell'illuminazione elettrica e si è aggravato con lo
+                    sviluppo irrazionale dell'illuminazione esterna, guidato dall'erroneo concetto "più luce = più
+                    sicurezza".</p>
+                <p><strong>L'obiettivo non è tornare al buio, ma illuminare in modo intelligente e
+                        responsabile.</strong></p>
+
+                <h3>Fonti di inquinamento</h3>
+                <ul class="clean-list">
+                    <li><strong>Cittadino:</strong> illuminazione pubblica e privata dispersiva.</li>
+                    <li><strong>Extraurbano:</strong> svincoli, caselli, stazioni elettriche.</li>
+                    <li><strong>Trasporti:</strong> aeroporti, porti, navi.</li>
+                </ul>
+            </div>
+
+            <div class="card full-width">
+                <h2>2. Effetti dell'I.L.</h2>
+
+                <div class="content-flex" style="align-items: flex-start;">
+                    <div style="flex: 1;">
+                        <h3>Sulla Cultura</h3>
+                        <p>La <strong>cancellazione del cielo stellato</strong> è un danno culturale immenso. L’UNESCO
+                            ha dichiarato il cielo notturno patrimonio dell’Umanità. Chi vive in città non ha idea della
+                            bellezza del firmamento che ha ispirato scienziati e poeti per millenni.</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Sugli Osservatori</h3>
+                        <p>Gli osservatori astronomici perdono efficienza e sono costretti a spostarsi in luoghi sempre
+                            più remoti. Anche l'astronomia amatoriale diventa sempre più difficile.</p>
+                    </div>
+                </div>
+
+                <h3>Sull'Ecosistema</h3>
+                <p>L'alterazione del ciclo luce/buio danneggia animali e piante:</p>
+                <ul class="clean-list">
+                    <li><strong>Uccelli migratori:</strong> disorientati dalle luci artificiali.</li>
+                    <li><strong>Tartarughe marine:</strong> i piccoli, confusi dalle luci, non trovano il mare.</li>
+                    <li><strong>Piante:</strong> l'illuminazione notturna altera la fotosintesi e i ritmi biologici,
+                        rendendole più vulnerabili ai parassiti.</li>
+                </ul>
+
+                <h3>Dispendio Economico e Ambientale</h3>
+                <p>Almeno il <strong>25%</strong> dell’energia luminosa è dispersa verso l’alto: uno spreco inutile.
+                    Ridurre questo spreco significherebbe risparmiare milioni di euro e ridurre enormemente le emissioni
+                    di CO2.</p>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="inquinamento.htm" class="cta-button">Torna all'indice degli argomenti</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

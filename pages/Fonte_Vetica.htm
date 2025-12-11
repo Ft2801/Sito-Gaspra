@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte Vetica - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Fonte Vetica</h1>
+
+        <section>
+            <p><img src="../img/Image013.JPG" alt="Paesaggio di Fonte Vetica" class="left shadow-img"
+                    style="float: left; margin: 0 20px 20px 0; max-width: 100%; border-radius: 8px;">Fonte Vetica è
+                situata sul bordo NordEst di Campo Imperatore e si erge ad una altitudine di m. 1632 s.l.m.. È così
+                chiamata per via di una fonte naturale che sorge ai margini di un bosco di pini ed abeti alle pendici
+                dei monti che la sovrastano che sono il Vado di Siella il M. Tremoggia e il M. Camicia (2570 m. s.l.m.).
+            </p>
+            <div style="clear: both;"></div>
+
+            <p>Durante i mesi invernali è ovviamente impraticabile per la molta neve, tuttavia spesso viene aperta con i
+                mezzi spazzaneve la s.da Pr.le che sale da Montebello o Farindola e permette, attraversando i noti prati
+                di Rigopiano, superando il rifugio Pescara, di giungere fino al Vado Sole da dove si inizia a godere dei
+                rigogliosi prati che si estendono quasi a perdita d’occhio in alcune direzioni.</p>
+
+            <p>Nei restanti mesi si può arrivare anche dal versante aquilano attraversando alcuni paesi tra cui Castel
+                Del Monte nel cui comune è compreso Fonte Vetica. (Leggi il sito Campo Imperatore per maggiori
+                dettagli). Il posto è molto frequentato dagli astrofili per via della purezza del cielo che allo zenit
+                permette di discernere ad occhio nudo stelle di oltre mezza magnitudine superiore alla sesta ed è meta
+                scelta sin dal 1987 dai Gruppi Astrofili Pescaresi e Piceni per il <span
+                    style="color: var(--highlight-color); font-weight: bold;">Campo Astronomico del Centro Italia</span>
+                organizzato di solito per il novilunio di Luglio o Agosto di ogni anno. <img src="../img/Image015.JPG"
+                    alt="Panorama di Fonte Vetica di notte" class="right shadow-img"
+                    style="float: right; margin: 0 0 20px 20px; max-width: 100%; border-radius: 8px;"></p>
+            <div style="clear: both;"></div>
+
+            <p>Non ci sono luci artificiali se non quelle del vicino rifugio tipico di montagna (che comunque vengono
+                spente poco dopo il crepuscolo) e che porta lo stesso nome della fonte la quale è da qui raggiungibile
+                attraverso una stradina da percorrere per circa duecento metri fino ad un rifugio della forestale dietro
+                il quale è situata.</p>
+
+            <p>Unico neo è l’assoluto divieto di sostare sui prati con l’automobile dato l’alto grado di protezione di
+                tutta la zona per cui bisogna cercare un giusto compromesso magari cercando un permesso specifico da
+                parte della Guardia Forestale di Castel Del Monte.</p>
+            <img src="../img/Image014.JPG" alt="Notte a Fonte Vetica" class="shadow-img"
+                style="max-width: 100%; border-radius: 8px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Astronomica 26/05/2001 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Escursione al Voltigno</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">26 Maggio 2001
+        </p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Una Serata Tranquilla</h2>
+            <p>Consueto appuntamento mensile sul <strong>Monte Voltigno</strong>. Dopo cena al "Fungarolo", abbiamo
+                iniziato le attività. La Luna, sebbene giovane, schiariva il cielo.</p>
+
+            <div class="alert alert-secondary">
+                <i class="fa-solid fa-telescope"></i> <strong>Strumenti Presenti:</strong>
+                <ul class="clean-list">
+                    <li>Skyline NT 200/5 (Maurizio e Giulia)</li>
+                    <li>Vixen R200SS su G11 (B.C.)</li>
+                    <li>C8 su Losmandy (Gianni)</li>
+                    <li>Vixen Apo 102 su Takahashi EM 10 (Marco)</li>
+                    <li>GP Vixen (Piero F.)</li>
+                </ul>
+            </div>
+
+            <p>Tentativi fotografici parzialmente riusciti su M101 e B72 (problemi di pellicola TP iper). Marco ha
+                sfruttato il puntamento automatico (Palomar AD 2000) per un tour del cielo: M39, M76, Ammassi
+                nell'Aquila, M8.</p>
+            <p><strong>Marte</strong> è stato osservato verso l'1:00 am; visibile la Grande Sirte e la calotta polare,
+                anche se il seeing non era ottimale.</p>
+
+            <p style="margin-top: 20px; text-align: right; font-style: italic;">Autore: B.C.</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

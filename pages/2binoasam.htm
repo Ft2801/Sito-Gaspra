@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2° BinoStar Party ASAM - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>2° BinoStar Party ASAM</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">12-13 Ottobre
+            2002</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Resoconto Evento</h2>
+            <p>Lo Star Party 2002 dell'ASAM è stato patrocinato dal <strong>CASAB</strong>, che ha collaborato con
+                l'ASAM nell'allestimento della fiera, tenutasi presso l'Osservatorio Sarub di Massa D'Albe. Il CASAB era
+                presente con uno stand, nel quale erano rappresentati ASAM, GASPRA, AAT, GAF e GAA. La fiera ha ospitato
+                numerosi espositori provenienti da tutta Italia, tra cui Stilottica.</p>
+
+            <div class="alert alert-secondary">
+                <i class="fa-solid fa-users"></i> <strong>Partecipanti GASPRA:</strong> Gianni, Bruno, Marco, Francesco,
+                Fabio, Alberto e Salvatore di Stilottica. È stata un'occasione per incontrare numerosi astrofili e
+                amici, tra cui Paolo Gattillo, Maurizio Morricone e gli astrofili napoletani, aquilani, frentani e
+                teatini.
+            </div>
+
+            <p>Francesco ha tenuto una conferenza la mattina sull'<strong>inquinamento luminoso</strong>, a cui hanno
+                assistito anche i membri del Lions Club di Avezzano. Questi ultimi hanno apprezzato molto l'intervento,
+                prolungandolo con numerose domande e osservazioni, e hanno dedicato a Francesco una targa ricordo di
+                notevole valore.</p>
+
+            <p>Le due giornate sono risultate molto interessanti, sia per le numerose conferenze (sul sole,
+                meteorologia, inquinamento luminoso, webcam e digicam, ecc.), sia per le novità presentate dagli
+                espositori, sia per le osservazioni notturne. In particolare, la seconda serata ha offerto un cielo
+                limpido e sereno, permettendo di confrontare vari binocoli e binoscopi messi a disposizione da
+                Astromeccanica e Ianus.</p>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px; margin-bottom: 15px;">Osservazioni Solari</h3>
+            <p>Davvero entusiasmante è stata la visione diurna delle enormi protuberanze solari, visibili già dal
+                pomeriggio e per tutto lo Star Party. Le osservazioni sono state effettuate sia con il filtro H-alfa di
+                Marcello Lugli, sia con il Coronado. Si tratta di due filtri di concezione diversa, ciascuno con
+                vantaggi e svantaggi.</p>
+            <p>Noi riteniamo che, a parità di prezzo, il filtro di Lugli sia leggermente migliore, anche se la
+                differenza è minima, nonostante la minor semplicità nella regolazione (quattro filtri interferenziali da
+                posizionare prima dell'oculare, contro l'unico filtro del Coronado, posto all'apertura dello strumento).
+            </p>
+
+            <p style="margin-top: 20px;">Nel complesso, la manifestazione è stata senz'altro positiva. Contiamo nel
+                prossimo anno di organizzarla interamente come CASAB.</p>
+            <p><i>Maggiori dettagli possono essere reperiti sul sito dell'<a href="#" class="btn-link">ASAM</a>.</i></p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

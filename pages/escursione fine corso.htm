@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Fine Corso - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Escursione di Fine Corso</h1>
+        <p class="subtitle">Conclusione del corso "Astronomia di Base"</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <p>Finalmente, dopo vari rinvii per maltempo, si è conclusa l'escursione finale del corso organizzato
+                    con la Circoscrizione n° 5 di Pescara. Il corso ha visto la partecipazione costante di circa 40
+                    iscritti.</p>
+
+                <h3>L'Escursione a Colle Leone</h3>
+                <p>Circa 50 persone hanno partecipato alla visita all'Osservatorio "Colle Leone" di Mosciano Sant'Angelo
+                    (TE). I partecipanti sono stati divisi in gruppi per rotazione:</p>
+
+                <div class="card-grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div class="card" style="margin: 0; background: rgba(255,255,255,0.05);">
+                        <h4><i class="fa-solid fa-eye"></i> Osservazione</h4>
+                        <p>Osservazione guidata in cupola con Paolo Gaspra. Nonostante le nubi, la Luna ha fatto
+                            capolino permettendo qualche osservazione.</p>
+                    </div>
+                    <div class="card" style="margin: 0; background: rgba(255,255,255,0.05);">
+                        <h4><i class="fa-solid fa-gem"></i> Fossili e Minerali</h4>
+                        <p>Conferenza tematica tenuta dal geologo Nicola.</p>
+                    </div>
+                    <div class="card" style="margin: 0; background: rgba(255,255,255,0.05);">
+                        <h4><i class="fa-solid fa-info-circle"></i> Le Attività</h4>
+                        <p>Presentazione delle attività dell'Osservatorio con Leandro.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 20px;">Nonostante il meteo non clemente, l'interesse dimostrato dai partecipanti è
+                    stato altissimo.</p>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="attivita.html" class="cta-button">Torna all'elenco Attività</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

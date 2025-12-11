@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giove - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Giove</h1>
+        <p class="subtitle">Il Gigante del Sistema Solare.</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Il Re dei Pianeti</h2>
+                <div class="content-flex">
+                    <img src="../img/Image110.jpg" alt="Immagine di Giove" class="shadow-img"
+                        style="max-width: 200px; margin-right: 20px;">
+                    <p><strong>Giove:</strong> è il più grande pianeta del Sistema Solare, una "stella mancata" composta
+                        principalmente da idrogeno ed elio. Se fosse stato poco più massiccio, avrebbe potuto innescare
+                        la fusione nucleare e diventare una stella, rendendo il nostro sistema binario. È visibile a
+                        occhio nudo come un astro luminosissimo. Al telescopio mostra le caratteristiche fasce nuvolose
+                        parallele e la famosa Grande Macchia Rossa.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Galileo e le Lune</h2>
+                <p>Nel 1610 <strong>Galileo Galilei</strong> scoprì i quattro satelliti maggiori (Io, Europa, Ganimede,
+                    Callisto), dimostrando che non tutto ruotava attorno alla Terra. Cassini in seguito (1665) scoprì la
+                    Grande Macchia Rossa e misurò la rotazione del pianeta.</p>
+            </div>
+
+            <div class="card">
+                <h2>Rotazione e Forma</h2>
+                <div class="content-flex">
+                    <img src="../img/Image115.jpg" alt="Rotazione differenziale" class="shadow-img"
+                        style="max-width: 120px; margin-right: 15px;">
+                    <p>Giove ha la rotazione più veloce di tutti i pianeti (meno di 10 ore!) e, essendo gassoso, ha una
+                        <strong>rotazione differenziale</strong> (velocità diverse a latitudini diverse). Questa
+                        velocità centrifuga lo rende visibilmente schiacciato ai poli.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Struttura Interna</h2>
+                <p>Probabilmente ha un piccolo nucleo roccioso/ghiacciato, avvolto da uno spesso strato di
+                    <strong>idrogeno metallico</strong> (dove l'idrogeno si comporta come un metallo conduttore a causa
+                    della pressione estrema). L'esterno è idrogeno molecolare gassoso. Giove emette più calore di quanto
+                    ne riceva dal Sole, residuo della sua formazione.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Atmosfera e Grande Macchia Rossa</h2>
+                <div class="content-flex">
+                    <img src="../img/Image112.gif" alt="Atmosfera di Giove" class="shadow-img"
+                        style="max-width: 150px; margin-right: 20px;">
+                    <div>
+                        <p>L'atmosfera è turbolenta, con venti fortissimi e bande di nubi colorate da composti di zolfo,
+                            fosforo e carbonio. La <strong>Grande Macchia Rossa</strong> è un gigantesco anticiclone,
+                            grande due volte la Terra, che dura da centinaia di anni.</p>
+                        <p>Giove possiede anche un campo magnetico colossale e letali fasce di radiazioni.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h2>Satelliti Galileiani</h2>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <div style="text-align: center; max-width: 150px;">
+                        <img src="../img/Image113.jpg" alt="Io" class="shadow-img"
+                            style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                        <h4>Io</h4>
+                        <p style="font-size: 0.8em;">Vulcanismo attivo estremo</p>
+                    </div>
+                    <div style="text-align: center; max-width: 150px;">
+                        <img src="../img/Image114.jpg" alt="Europa" class="shadow-img"
+                            style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                        <h4>Europa</h4>
+                        <p style="font-size: 0.8em;">Oceano sotto i ghiacci</p>
+                    </div>
+                    <div style="text-align: center; max-width: 150px;">
+                        <img src="../img/Image111.jpg" alt="Ganimede" class="shadow-img"
+                            style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                        <h4>Ganimede</h4>
+                        <p style="font-size: 0.8em;">La luna più grande</p>
+                    </div>
+                    <div style="text-align: center; max-width: 150px;">
+                        <img src="../img/Image116.gif" alt="Callisto" class="shadow-img"
+                            style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                        <h4>Callisto</h4>
+                        <p style="font-size: 0.8em;">Antico e craterizzato</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h2>Le Missioni Spaziali</h2>
+                <p>Esplorato dalle sonde <strong>Pioneer</strong>, <strong>Voyager</strong> (che scoprirono gli anelli
+                    di Giove!) e <strong>Galileo</strong>. La sonda Galileo ha sganciato una sonda atmosferica e ha
+                    orbitato a lungo studiando le lune. La sonda <strong>Juno</strong> (attualmente in orbita) sta
+                    studiando il campo gravitazionale e magnetico.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Dati Sintetici</h2>
+                <ul class="clean-list">
+                    <li><strong>Massa:</strong> 318 (Terra = 1)</li>
+                    <li><strong>Raggio:</strong> 71.492 km</li>
+                    <li><strong>Giorno:</strong> 9 ore 55 min</li>
+                    <li><strong>Anno:</strong> 11,8 anni terrestri</li>
+                    <li><strong>Satelliti:</strong> 90+ (4 principali)</li>
+                    <li><strong>Anelli:</strong> Sì (tenui)</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Piero D'Incecco
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

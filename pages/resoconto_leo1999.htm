@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonidi 1999 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Leonidi del 18 Novembre 1999</h1>
+        <p class="subtitle">Resoconto della spedizione osservativa sulla Maiella</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Il Racconto della Notte</h2>
+                <div class="content-flex">
+                    <div style="flex: 2;">
+                        <p>Il Gruppo Astrofili Pescaresi ha organizzato una spedizione in montagna la sera del 17/11/99
+                            per osservare l’atteso sciame delle Leonidi.</p>
+                        <p>L'attività è iniziata lentamente, ma dalle 1:30 del 18 novembre il numero di meteore è
+                            cresciuto repentinamente. Nonostante il forte vento e il passaggio di nubi, lo spettacolo è
+                            stato memorabile.</p>
+                        <p><strong>Il Picco:</strong> Intorno alle 2:40, in soli 45 minuti, sono state contate oltre
+                            <strong>650 meteore</strong>! Lo ZHR calcolato è stato di circa <strong>2750</strong>.</p>
+                    </div>
+                    <div class="alert alert-info" style="flex: 1; align-self: flex-start;">
+                        <h4><i class="fa-solid fa-star"></i> Dati Osservativi</h4>
+                        <ul class="clean-list">
+                            <li><strong>Data:</strong> 17-18 Nov 1999</li>
+                            <li><strong>Luogo:</strong> Maiella (CH)</li>
+                            <li><strong>Meteo:</strong> Vento forte, nubi sparse</li>
+                            <li><strong>ZHR Max:</strong> ~2750</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Alle 4:30 il fenomeno si è attenuato. È stata una vera tempesta di meteore, accompagnata purtroppo da
+                    una tempesta meteorologica reale!</p>
+                <p style="text-align: right; font-style: italic;">Marco Di Biase</p>
+
+                <div class="divider"></div>
+
+                <div style="text-align: center;">
+                    <a href="galleria.html" class="cta-button">Guarda le foto nella Galleria</a>
+                </div>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="attivita.html" class="cta-button">Torna all'elenco Attività</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html" class="active">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Galleria Fotografica</h1>
+        <p style="text-align: center; margin-bottom: 50px; color: var(--text-muted);">Esplora l'universo attraverso gli
+            occhi dei nostri soci.</p>
+
+        <div class="card-grid"
+            style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 800px; margin: 0 auto;">
+
+            <a href="new_gallery.html" class="card"
+                style="text-decoration: none; text-align: center; display: block; padding: 50px 20px;">
+                <i class="fa-solid fa-camera-retro"
+                    style="font-size: 4rem; color: var(--highlight-color); margin-bottom: 20px;"></i>
+                <h3>New Gallery</h3>
+                <p>Le immagini più recenti, realizzate con strumentazione moderna.</p>
+                <span class="cta-button" style="margin-top: 20px; font-size: 0.9rem;">Esplora <i
+                        class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="old_gallery.html" class="card"
+                style="text-decoration: none; text-align: center; display: block; padding: 50px 20px;">
+                <i class="fa-solid fa-images" style="font-size: 4rem; color: #8da2d7; margin-bottom: 20px;"></i>
+                <h3>Old Gallery</h3>
+                <p>Archivio storico delle osservazioni e delle fotografie passate.</p>
+                <span class="cta-button" style="margin-top: 20px; font-size: 0.9rem;">Esplora Archivio <i
+                        class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+            fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+            document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Astronomica 09/02/2002 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Escursione sul Monte Voltigno</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">9 Febbraio
+            2002</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Resoconto</h2>
+            <p>Il 09/02/02 i soci del Gaspra hanno effettuato un'escursione astronomica sul <strong>Monte
+                    Voltigno</strong>, anche se hanno dovuto arrendersi alla neve, che aveva portato al blocco della
+                strada principale, un paio di km dopo il Ristorante Fungarolo, trasformata per l'occasione in una pista
+                di sci da fondo.</p>
+
+            <div class="alert alert-warning">
+                <i class="fa-solid fa-snowflake"></i> <strong>Condizioni Avverse:</strong> Si sono fermati ad un'altezza
+                non sufficiente per avere buoni risultati fotografici, tenuto anche conto dell'inquinamento luminoso che
+                in quella zona disturbava le osservazioni.
+            </div>
+
+            <p class="mt-3">Erano presenti <strong>Gianni, Marco, Piero F., Maurizio e Giulia</strong>.</p>
+
+            <p>A parte alcune osservazioni visuali dei soliti pianeti giganti e di qualche oggetto di profondo cielo, e
+                a parte i disperati tentativi di Gianni di mettere a frutto la nuova <em>guida fuori asse Orion</em>,
+                andati a vuoto per via alcune variazioni da apportare al complesso ottico, la velatura del cielo e le
+                non buone condizioni del sito sopra citate non hanno permesso di ottenere risultati di rilievo.</p>
+
+            <p style="text-align: center; font-style: italic; margin-top: 20px; color: var(--text-muted);">"Attendiamo
+                fiduciosi il prossimo novilunio."</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

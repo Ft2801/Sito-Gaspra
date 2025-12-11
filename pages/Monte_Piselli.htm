@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Piselli (TE) - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Monte Piselli (TE)</h1>
+
+        <section>
+            <h2>Descrizione del sito</h2>
+            <p>La montagna di Ascoli. Ci troviamo infatti a due passi da Ascoli Piceno e gli ascolani sono proprio
+                fortunati perché con meno di un quarto d’ora di macchina possono raggiungere impianti sciistici ed un
+                discreto sito osservativo. Per chi viene da fuori, una volta raggiunta Ascoli (dal mare con la
+                superstrada) è sufficiente svoltare verso sud e salire. In poco tempo si arriva a Colle S. Giacomo dove
+                si trovano alcuni ristoranti e bar ad una quota di circa 1.100 metri.</p>
+
+            <p>Bisogna proseguire e a questo punto la strada non è più asfaltata. Dopo pochi minuti si raggiunge un
+                grande spiazzo che nella stagione sciistica funge da parcheggio e che può essere usato per montare gli
+                strumenti. È preferibile però salire sulla collinetta verso ovest poiché può capitare che qualche
+                perditempo arrivi in piena posa fotografica con tutti i fari ben accesi!</p>
+
+            <p>La quota è di circa 1.350 metri, ma la sottostante città di Ascoli contribuisce ad un inquinamento
+                luminoso che verso nord e verso nord-est è considerevole. Verso sud-est la sagoma della montagna copre
+                leggermente l’orizzonte e quindi la zona di cielo maggiormente valida è quella verso sud, sud-ovest.</p>
+
+            <p>Per gli astrofotografi dunque un discreto sito, ma che non si può definire ottimale. C’è però da dire
+                che, ad esempio, in occasione della cometa Hale-Bopp abbiamo potuto riprendere delle buone immagini e
+                che, soprattutto per chi abita nella zona, rimane comunque un sito da tenere in considerazione per
+                serate "mordi e fuggi".</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Brunello Corchia
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osservatori - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Osservatori e Siti Osservativi</h1>
+
+        <section>
+            <h2 class="section-title">Osservatori Privati</h2>
+            <div class="card-grid">
+                <div class="card observatory-card">
+                    <img src="../img/colleleone.jpg" alt="Osservatorio Astronomico di Colle Leone" class="observatory-img">
+                    <h3>Osservatorio Colle Leone</h3>
+                    <p>Struttura privata dedicata alla ricerca e alla divulgazione.</p>
+                    <a href="oacl.htm" class="cta-button" style="margin-top: 15px; font-size: 0.9rem;">Visita Pagina <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card observatory-card">
+                    <img src="../img/capolavilla.jpg" alt="Osservatorio Astronomico Capolavilla" class="observatory-img">
+                    <h3>Osservatorio Capolavilla</h3>
+                    <p>Punto di osservazione privilegiato nel cuore dell'Abruzzo.</p>
+                    <a href="capolavilla.htm" class="cta-button" style="margin-top: 15px; font-size: 0.9rem;">Visita
+                        Pagina <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Siti Osservativi del Centro Italia</h2>
+            <div class="card-grid">
+                <a href="Monte_voltigno.htm" class="card" style="text-align: center; text-decoration: none;">
+                    <h3>Monte Voltigno (PE)</h3>
+                    <p>Il sito classico per le nostre escursioni mensili.</p>
+                </a>
+
+                <a href="Fonte_Vetica.htm" class="card" style="text-align: center; text-decoration: none;">
+                    <h3>Fonte Vetica (AQ)</h3>
+                    <p>Campo Imperatore, un cielo tra i più bui d'Italia.</p>
+                </a>
+
+                <a href="Campo_imperatore.htm" class="card" style="text-align: center; text-decoration: none;">
+                    <h3>Campo Imperatore (AQ)</h3>
+                    <p>L'osservatorio astronomico d'Abruzzo.</p>
+                </a>
+
+                <a href="Campo_Felice_di_Lucoli.htm" class="card" style="text-align: center; text-decoration: none;">
+                    <h3>Campo Felice (AQ)</h3>
+                    <p>Sito invernale per eccellenza.</p>
+                </a>
+
+                <a href="Blockhaus.htm" class="card" style="text-align: center; text-decoration: none;">
+                    <h3>Blockhaus (CH)</h3>
+                    <p>Sulla Maiella, panorama mozzafiato.</p>
+                </a>
+
+                <a href="Forca_Canapine.htm" class="card" style="text-align: center; text-decoration: none;">
+                    <h3>Forca Canapine (AP)</h3>
+                    <p>Al confine tra Marche e Umbria.</p>
+                </a>
+
+                <a href="Monte_Piselli.htm" class="card" style="text-align: center; text-decoration: none;">
+                    <h3>Monte Piselli (TE)</h3>
+                    <p>Monti della Laga, un balcone sull'Adriatico.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+            fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+            document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

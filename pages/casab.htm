@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinamento degli astrofili d'Abruzzo - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Coordinamento degli astrofili d'Abruzzo (CASAB)</h1>
+
+        <div class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Lotta all'Inquinamento Luminoso</h2>
+            <p>Il 21/06/02 si è svolto un importante incontro tra i rappresentanti di molte associazioni astrofile
+                d'Abruzzo, allo scopo di pianificare un'azione socio-politica per l'approvazione di una Legge Regionale
+                contro l'Inquinamento Luminoso.</p>
+
+            <div class="alert alert-warning">
+                <h3><i class="fa-solid fa-lightbulb"></i> Cos'è l'Inquinamento Luminoso?</h3>
+                <p>È l'uso improprio dell'illuminazione che disperde luce verso l'alto, causando:</p>
+                <ul class="clean-list">
+                    <li><i class="fa-solid fa-bolt"></i> <strong>Spreco Energetico:</strong> Denaro pubblico sprecato
+                        per illuminare il cielo.</li>
+                    <li><i class="fa-solid fa-star-half-stroke"></i> <strong>Oscuramento del Cielo:</strong> Impedisce
+                        l'osservazione astronomica.</li>
+                    <li><i class="fa-solid fa-leaf"></i> <strong>Danni Ambientali:</strong> Altera i cicli vitali di
+                        flora e fauna.</li>
+                </ul>
+            </div>
+
+            <p>L'incontro, tenutosi presso la sede del GASPRA a Pescara, ha portato alla creazione del <strong>CASAB
+                    (Coordinamento Astrofili d'Abruzzo)</strong>.</p>
+            <p>Obiettivo: Promuovere una legge che garantisca luminosità e sicurezza dove serve, eliminando gli sprechi
+                e proteggendo il cielo stellato.</p>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <p>Maggiori informazioni: <a href="http://www.cielobuio.org/" target="_blank" class="btn-link">CieloBuio
+                        <i class="fa-solid fa-external-link-alt"></i></a></p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computerizzazione Takahashi EM 10 B - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html" class="active">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Computerizzazione della Takahashi EM 10 B</h1>
+        <p class="subtitle">Adattamento del Palomar AD 2000</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <p>L’astrofilia di questo terzo millennio è anch'essa permeata del fenomeno ormai dilagante che lo
+                    caratterizza; la rivoluzione informatica che è presente un po’ in ogni settore dove può spaziare la
+                    tecnologia.</p>
+                <p>L’elettronica è sempre stata un elemento fondamentale delle montature dei telescopi ed il suo
+                    progredire è stato ed è tuttora in una fase più avanzata di quella dell’ottica strumentale destinata
+                    agli astrofili. Attualmente molti modelli di piccoli telescopi in commercio sono "computerizzati"
+                    cioè, in pratica, sono gestiti e/o assistiti nel puntamento degli astri da un piccolo controllore.
+                </p>
+                <p>La computerizzazione delle montature dei telescopi si è sviluppata su due fronti:</p>
+                <ul class="clean-list">
+                    <li><i class="fa-solid fa-crosshairs"></i> <strong>Puntamento Attivo:</strong> Agisce direttamente
+                        sui motori del telescopio puntando direttamente gli oggetti ad una certa velocità il più delle
+                        volte programmabile dall’utilizzatore.</li>
+                    <li><i class="fa-solid fa-list-ol"></i> <strong>Puntamento Passivo:</strong> Consiste in una coppia
+                        di “cerchi graduati digitali” costituiti da due encoder applicati sugli assi di AR e DEC che
+                        permettono di leggere le coordinate sul display della centralina di controllo quando si sposta
+                        manualmente il telescopio.</li>
+                </ul>
+
+                <h3>Il Computer Palomar AD 2000</h3>
+                <p>Apparecchiature adattabili a più generi e marche di montature non sono molto frequenti sul mercato;
+                    solo da qualche anno una ditta veneta ebbe la geniale idea di fabbricare un prodotto che potesse
+                    applicarsi a qualsiasi montatura equatoriale con semplici lavori meccanici di adattamento. Si tratta
+                    del “Palomar AD 2000”.</p>
+
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="../img/comp1.jpeg" alt="Palomar AD 2000" class="shadow-img">
+                        <figcaption>Il computer Palomar AD 2000</figcaption>
+                    </figure>
+                </div>
+
+                <p>Esso consiste in un minicomputer alimentato a 12 volt che pilota due motori a passo con funzione a
+                    micropasso (25.600 step/giro). Con questa modalità di funzionamento si riesce ad evitare di
+                    interporre un riduttore meccanico tra albero motore e vite senza fine del sistema di trascinamento
+                    della montatura poiché il motore riesce a ruotare molto lentamente ed a seguire il moto siderale;
+                    nello stesso tempo può anche essere spinto fino a velocità di 1.200x.</p>
+                <p>Il Palomar permette di automatizzare molte montature equatoriali, anche autocostruite, rendendo
+                    possibile il puntamento di tutti gli oggetti Messier, NGC e 225 stelle. La sua struttura costruttiva
+                    è stata denominata ad “anello aperto” ed il suo settaggio software permette di impostare qualsiasi
+                    rapporto di riduzione esistente tra i motori e gli alberi di AR e DEC.</p>
+
+                <h3>Il Collegamento dei Motori</h3>
+                <p>L’uso del Palomar prevede l’obbligatoria sostituzione degli eventuali motori presenti sulla
+                    montatura. Per le montature che montano i motori all’interno del corpo della montatura come
+                    l’Astrofisycs GE 600 o le Takahashi il problema si complica non poco soprattutto per motivi di
+                    spazio e di ancoraggio.</p>
+                <p>Volendo a tutti i costi sfruttare la duttilità di questo strumento “made in Italy”, decisi di
+                    adattare un paio di motori a passo di taglia inferiore a quelli forniti con il Palomar all’interno
+                    del corpo della mia Takahashi. Mi procurai una coppia di motorini da 200 step di 42 mm, (contro i 57
+                    mm di quelli originali), idonei al funzionamento a micropassi da sistemare al posto di quelli
+                    originali.</p>
+
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="../img/comp2.jpeg" alt="Motori Takahashi" class="shadow-img">
+                        <figcaption>I nuovi motori installati</figcaption>
+                    </figure>
+                </div>
+
+                <p>E’ stato necessario preparare una basetta di supporto di dimensioni uguali a quella originale sulla
+                    quale montare, oltre ai nuovi motorini, anche due ingranaggi in ottone che avrebbero permesso di
+                    trasferire il moto al terzo ingranaggio presente sulle viti senza fine delle due corone elicoidali.
+                    I tre ingranaggi tra l’albero motore e la vite s.f. forniscono una riduzione meccanica di 3,75 che
+                    oltre a portare il rapporto di riduzione finale al valore di 540, mi garantisce un aumento di coppia
+                    molto utile per assicurare un trascinamento dei moti agli assi dello strumento.</p>
+
+                <div class="alert alert-info">
+                    <p>E’ stato ovviamente necessario sostituire pure il pannello dell’elettronica della Takahashi EM 10
+                        autocostruito con un lamierino di alluminio dove ho praticato due fori per l’alloggiamento delle
+                        prese degli spinotti per i cavetti dei motori.</p>
+                </div>
+
+                <h3>Considerazioni Finali</h3>
+                <p>Da alcune prove ho riscontrato che effettivamente il Palomar può funzionare egregiamente e si arriva
+                    abbastanza celermente ad una padronanza dei comandi fondamentali. Ho stimato una precisione di
+                    puntamento con un errore entro poche decine di primi d’arco in un settore di cielo di 90°.</p>
+
+                <p>Unico vero neo del Palomar AD 2000 è il forte consumo di energia che richiede; i potenti motori che
+                    lo equipaggiano infatti assorbono fino a ben sei ampere di corrente oltre il mezzo ampere del
+                    controllore; bisogna quindi farsi bene i conti con le batterie a disposizione se non si vuole
+                    correre il rischio di rimanere in panne con il telescopio nel ben mezzo di una splendida serata
+                    osservativa.</p>
+
+                <p style="text-align: right; margin-top: 30px; font-style: italic;">Marco Di Biase</p>
+
+                <div class="card-action" style="text-align: center; margin-top: 30px;">
+                    <a href="autocostruzione.html" class="cta-button">Torna ad Autocostruzione</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

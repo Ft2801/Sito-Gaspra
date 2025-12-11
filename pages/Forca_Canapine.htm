@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forca Canapine - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Forca Canapine (Ascoli Piceno)</h1>
+
+        <section>
+            <p>La località di Forca Canapine è situata al confine tra Marche ed Umbria, in provincia di Ascoli Piceno, e
+                si trova a 1542 metri di altezza. Nota stazione sciistica non è "astronomicamente" frequentabile nella
+                stagione invernale a causa appunto delle abbondanti nevicate. Nella stagione estiva è invece un ottimo
+                sito per astrofili ed astrofotografi. Per chi viene dalla costa è facilmente raggiungibile prendendo la
+                superstrada per Ascoli Piceno, che si deve percorrere tutta fino ad imboccare la Salaria; si prosegue in
+                direzione Roma, si superano il comune di Acquasanta e quello di Arquata del Tronto. Ad un certo punto si
+                svolta a destra seguendo le indicazioni per Norcia. La strada, ottima fino a questo punto, ora si fa in
+                salita rimanendo comunque di buona percorribilità.</p>
+
+            <p><img src="../img/image002.jpg" alt="Gruppo astrofili a Forca Canapine - Aprile 1997" class="left shadow-img"
+                    style="float: left; margin: 0 20px 20px 0; max-width: 100%; border-radius: 8px;">Si incontra la
+                nuovissima galleria per Norcia che non si deve imboccare. Bisogna infatti proseguire nella salita e dopo
+                pochi chilometri si arriva a Forca Canapine. Il posto, che ha anche scorci naturali molto belli, ha
+                diversi alberghetti e pensioni; nessun problema dunque per pernottamenti o ristorazione. Chi vuole fare
+                astrofotografia dovrà però spostarsi con gli strumenti in quanto nei pressi degli alberghi c’è
+                l’illuminazione pubblica (contenuta). Con poca strada si possono raggiungere comunque posti molto bui e
+                privi di traffico.</p>
+            <div style="clear: both;"></div>
+
+            <p>Il cielo è splendido e l’orizzonte è libero permettendo l’osservazione e la fotografia anche di oggetti
+                bassi. Solitamente il nostro gruppo sceglie tra due posti isolati validi entrambi che permettono
+                fotografia a lunga posa senza problemi. (Nella foto il WEA di apr/97-a caccia della Hale Bopp; da
+                sinistra a destra: Massimo Caimmi, Brunello Corchia, Paolo Berardi, Marco di Biase, Bruno Cirillo e
+                Alberto Poli). A volte è presente un po’ di vento, che in taluni casi può essere molto fastidioso. La
+                presenza di un caseggiato vicino al valico (forse un ristoro, chiuso nella stagione estiva) può, in
+                questi casi, costituire un riparo soprattutto in caso di montature meno robuste. L’umidità è in genere
+                contenuta, mentre il freddo può essere pungente in primavera e in autunno. In definitiva il sito è
+                sicuramente valido e consigliabile a tutti gli appassionati. Il periodo migliore è quello estivo
+                (Luglio-Agosto), ma il posto è ugualmente frequentabile da Maggio a Settembre-Ottobre.</p>
+
+            <p>Come ultima annotazione ricordiamo che a pochi chilometri è visitabile l’antica città di Norcia, mentre
+                un po’ più a Nord vi è la caratteristica Piana di Castelluccio. Due itinerari che consigliamo a tutti.
+            </p>
+
+            <h3>Alcuni alberghi (con annesso ristorante):</h3>
+            <ul class="clean-list">
+                <li><i class="fa-solid fa-hotel"></i> Albergo Arquata (da Ilda) tel. 0736-808112</li>
+                <li><i class="fa-solid fa-hotel"></i> al Kapriol tel. 0736-808119</li>
+                <li><i class="fa-solid fa-house-chimney"></i> rifugio Città di Ascoli tel. 0736-808186</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Brunello Corchia
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

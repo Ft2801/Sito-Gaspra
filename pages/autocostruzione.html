@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocostruzione - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html" class="active">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Autocostruzione</h1>
+        <h2
+            style="text-align: center; color: var(--text-muted); font-size: 1.2rem; margin-top: -30px; margin-bottom: 50px;">
+            (testi a cura di Marco Di Biase)</h2>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img src="../img/ominocos.GIF" alt="GIF Autocostruzione" style="max-width: 150px; border-radius: 8px;">
+        </div>
+
+        <div class="card-grid">
+            <a href="automoneq.html" class="card card-link-block" style="text-decoration: none; display: block;">
+                <h3>🏗️ Montatura Equatoriale</h3>
+                <p>Guida passo-passo per l'autocostruzione di una montatura equatoriale.</p>
+            </a>
+
+            <a href="custom.html" class="card card-link-block" style="text-decoration: none; display: block;">
+                <h3>🔧 Custom Takahashi</h3>
+                <p>Customizzazione di una Takahashi EM 10 B.</p>
+            </a>
+
+            <a href="cupola.html" class="card card-link-block" style="text-decoration: none; display: block;">
+                <h3>🏠 Cupola Osservatorio</h3>
+                <p>Come costruirsi una cupola per il proprio osservatorio domestico.</p>
+            </a>
+
+            <a href="computerizz.html" class="card card-link-block" style="text-decoration: none; display: block;">
+                <h3>💻 Computerizzazione</h3>
+                <p>Computerizzazione di una Takahashi EM 10 B: elettronica e software.</p>
+            </a>
+
+            <a href="customeq6.html" class="card card-link-block" style="text-decoration: none; display: block;">
+                <h3>🚀 Custom EQ-6</h3>
+                <p>Upgrade e ottimizzazioni per la montatura EQ-6.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

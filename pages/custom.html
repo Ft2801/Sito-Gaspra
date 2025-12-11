@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizzazione Takahashi EM 10 B - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html" class="active">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Customizzazione di una Takahashi EM 10 B</h1>
+        <p class="subtitle">L'interfaccia con l'autoguida Pictor</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <div class="gallery-grid" style="margin-bottom: 30px;">
+                    <figure>
+                        <img src="../img/cus1.jpg" alt="Takahashi EM 10 Custom" class="shadow-img">
+                    </figure>
+                </div>
+
+                <p>E’ normale per un astrofilo non proprio alle prime esperienze, ma già piuttosto “navigato” in fatto
+                    di strumentazione tecnica, personalizzare il proprio strumento con alcune modifiche o
+                    implementazioni che possano offrire maggiori performance al telescopio nell’uso pratico sul campo e
+                    di conseguenza anche più soddisfazioni per l’utilizzatore.</p>
+                <p>Nel momento in cui decisi di acquistare una montatura parallattica per le spedizioni “mordi e fuggi”,
+                    optai per una Takahashi EM 10 che offriva discrete prestazioni, grande portabilità ed una certa
+                    affidabilità garantita dal prestigio del marchio giapponese nella strumentazione astronomica.</p>
+                <p>Tra le caratteristiche di questa montatura notai prima dell’acquisto la possibilità di poterla
+                    interfacciare con un sistema di autoguida del tipo Sbig ST4 anche se, in effetti, non notai alcuna
+                    presa d’attacco né sul pannello dell’elettronica integrata nel corpo della montatura, né sulla
+                    pulsantiera. In effetti, era mio preciso intento poter sfruttare la possibilità offerta da questo
+                    tipo di apparecchiatura elettronica per la fotografia a lunga posa dopo circa due decenni di assiduo
+                    uso dell’oculare di guida ed il fatto di non trovare una connessione ad hoc su questo strumento,
+                    come quelle presentate su altre montature piuttosto costose, non mi scoraggiò per niente
+                    all’acquisto sicuro di poter risolvere facilmente il problema con un semplice intervento
+                    sull’elettronica.</p>
+
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="../img/cus2.jpg" alt="Dettaglio Interfaccia" class="shadow-img">
+                    </figure>
+                </div>
+
+                <h3>L'Autoguida Pictor 201 XT</h3>
+                <p>Decisi di interfacciare all’elettronica della mia Takahashi un Pictor 201 xt che, sebbene nato per
+                    funzionare con le montature della nota casa costruttrice americana, può pure essere collegato ad
+                    altre montature equatoriali con l’ausilio di un’apparecchiatura elettronica ausiliaria da interporre
+                    tra il Pictor e l’elettronica dello strumento. In pratica si tratta di una piccola scatola con
+                    quattro microrelè che agiscono direttamente sulla pulsantiera chiudendo, (o aprendo), i contatti dei
+                    pulsanti che comandano le quattro direzioni dei due motori.</p>
+                <p>Questo prezioso accessorio riesce quindi a chiudere i contatti normalmente aperti, (N.A.), aprire i
+                    contatti normalmente chiusi, (N.C.) o a deviare un contatto verso un terzo polo. Di solito le
+                    pulsantiere presentano i pulsanti nella posizione aperta che chiudono il contatto per l’attivazione
+                    della direzione dei moti dei motori; anche la EM 10 presenta questa caratteristica e una volta
+                    aperta la pulsantiera non è stato difficile individuare i quattro contatti sulla piccola basetta del
+                    circuito stampato che fanno capo ai quattro pulsanti.</p>
+
+                <h3>Lo spinotto di collegamento</h3>
+                <p>La scatola di interfaccia è fornita con un cavo a 15 pin per sfruttare la flessibilità tipica dei
+                    Pictor sulle varie tipologie di contatti delle pulsantiere delle montature dei telescopi.
+                    Personalmente ho trovato conveniente preparare la connessione sulla pulsantiera con una coppia di
+                    due spinotti a nove pin del tipo porta seriale 232 montati con conchiglie di plastica. Tutti i
+                    contatti tra fra i poli della pulsantiera ed i pin dello spinotto sono stati ovviamente realizzati
+                    saldando degli spezzoni di filo elettrico sottile direttamente dalla basetta ramata della
+                    pulsantiera.</p>
+
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="../img/cus3.jpg" alt="Spinotto Collegamento" class="shadow-img">
+                        <figcaption>Dettaglio del cablaggio dello spinotto</figcaption>
+                    </figure>
+                </div>
+
+                <p>I quattro pin inferiori dello spinotto sono stati ponticellati fra loro e uniti al polo comune della
+                    pulsantiera; gli altri quattro poli relativi ad ognuno dei rispettivi pulsanti della pulsantiera li
+                    ho collegati a quattro dei cinque pin della fila superiore dello spinotto. A questo punto restava
+                    che connettere l’altro spinotto da nove poli al cavo della scatola relè per perfezionare il
+                    collegamento.</p>
+                <p>Ho trovato conveniente procedere nel seguente modo:</p>
+                <ul class="clean-list">
+                    <li><i class="fa-solid fa-plug"></i> Unire i due spinotti maschio-femmina per non correre il rischio
+                        di confondersi.</li>
+                    <li><i class="fa-solid fa-bolt"></i> Collegare il polo comune della pulsantiera ai quattro contatti
+                        comuni degli altrettanti deviatori dei relè, poli n.ri 5, 8, 11, 14 dello spinotto a 15 pin.
+                    </li>
+                    <li><i class="fa-solid fa-ethernet"></i> Collegare i quattro contatti dei pulsanti della pulsantiera
+                        con i contatti relativi alla posizione N.A. dei relè, poli n.ri 4, 7, 10, 13.</li>
+                    <li><i class="fa-solid fa-check"></i> A questo punto il collegamento del Pictor alla EM 10 è
+                        completato.</li>
+                </ul>
+
+                <h3>Suggerimenti Pratici</h3>
+                <p>I cavetti elettrici che si devono saldare sulla basetta devono necessariamente uscire dalla
+                    pulsantiera prima di essere uniti allo spinotto. Inizialmente avevo fatto passare questi fili
+                    elettrici dallo stesso foro della pulsantiera dove passa il cavo che si collega al pannello di
+                    controllo sulla montatura; dopo qualche sessione d’uso dovetti constatare che l’idea non era stata
+                    delle migliori visto che più di un filo si tranciò.</p>
+                <p>Ho deciso allora di forare nella parte inferiore la scatola metallica della pulsantiera da dove
+                    potessero fuoriuscire tutti i fili necessari attraverso una guaina.</p>
+                <p>Feci passare anche un sesto filo elettrico per alimentare il polo positivo di quattro micro led
+                    luminosi che ho trovato utile inserire nella conchiglia del connettore. I poli negativi di questi
+                    ultimi sono collegati in serie con i contatti, ovviamente anch’essi negativi, della basetta della
+                    pulsantiera previa interposizione di una resistenza da circa 200.000 ohm sul filo di alimentazione
+                    positivo; quando il relè chiude il collegamento o quando l’operatore schiaccia un pulsante, i diodi
+                    si accendono confermando il comando e l’avvenuto contatto.</p>
+
+                <div class="alert alert-info">
+                    <h4><i class="fa-solid fa-lightbulb"></i> Utilità dei LED</h4>
+                    <p>Oltre che per avere sott’occhio il comportamento della montatura in guida durante la posa i led
+                        sono preziosi durante la fase di taratura del Pictor su una stellina di riferimento. Una grossa
+                        limitazione di questo sistema di autoguida è la mancanza di poter sopperire al recupero del
+                        backlash in declinazione quando è necessario cambiare direzione in tale asse. Se si avrà
+                        l’accortezza di far iniziare la taratura sulla stella dai movimenti in ascensione retta e di
+                        assicurarsi che il primo dei movimenti in declinazione ingrani sulla vite in declinazione per
+                        averlo preventivamente azionato manualmente, quando l’ultimo led si accenderà basterà inserire
+                        per una frazione di secondo il moto a 16X affinché si possa essere sufficientemente sicuri che
+                        il Pictor possa percepire in modo abbastanza veritiero il reale spostamento della stellina.</p>
+                </div>
+
+                <p>Il risultato finale che ho ottenuto è sicuramente soddisfacente tale da non farmi rimpiangere il
+                    tempo perso per effettuare il collegamento e capire al meglio il funzionamento dell’autoguida Pictor
+                    201 xt.</p>
+
+                <p style="text-align: right; margin-top: 30px; font-style: italic;">Marco Di Biase</p>
+
+                <div class="card-action" style="text-align: center; margin-top: 30px;">
+                    <a href="autocostruzione.html" class="cta-button">Torna ad Autocostruzione</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

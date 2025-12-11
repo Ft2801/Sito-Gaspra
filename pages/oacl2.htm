@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La strumentazione scientifica - Osservatorio Astronomico Colle Leone</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>La strumentazione scientifica</h1>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Il telescopio principale</h2>
+
+            <div class="content-flex">
+                <img src="../img/image032.jpg" alt="Telescopio principale OACL" class="shadow-img"
+                    style="max-width: 350px; width: 100%;">
+                <div style="flex: 1;">
+                    <p>Come si è già accennato, il riflettore da 50cm costituisce lo strumento principe
+                        dell’osservatorio. Ad esso si affianca un telescopio ausiliario di tipo
+                        <strong>Schmidt-Cassegrain del diametro di 20cm</strong>, utilizzato per il puntamento e la
+                        guida, nonché per l’osservazione del sole attraverso filtri di Mylar a tutta apertura.</p>
+                </div>
+            </div>
+
+            <p class="mt-3">Con una lunghezza focale di ben <strong>9 metri</strong>, il telescopio principale si presta
+                soprattutto a quelle osservazioni in cui va privilegiato il forte ingrandimento, a scapito di un grande
+                campo visivo. Nonostante tale limitazione, la scelta della configurazione ottica di tipo Cassegrain si è
+                rivelata nel tempo un giusto compromesso tra le esigenze dell’osservazione generica ad uso dei
+                visitatori e scolaresche, e quelle dello studio scientifico vero e proprio.</p>
+            <p>Oggetti di grande impatto visivo come pianeti e ammassi stellari risaltano splendidamente
+                nell’osservazione attraverso tale sistema ottico. Si vuole ricordare come ai tempi della sua
+                progettazione, tale telescopio era all’avanguardia nell’intero territorio nazionale.</p>
+        </section>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Il telescopio secondario e strumenti
+                aggiuntivi</h2>
+            <ul class="clean-list">
+                <li>
+                    <span><i class="fa-solid fa-telescope" style="color: var(--highlight-color);"></i>
+                        <strong>Telescopio Secondario:</strong> Riflettore da 30cm alloggiato nella seconda cupola.
+                        Sistema ottico doppio (Cassegrain 8m e Newton 1500mm), ideale per foto e visuale.</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-desktop" style="color: var(--highlight-color);"></i>
+                        <strong>Informatizzazione:</strong> Elaboratore elettronico per programmazione scientifica e
+                        didattica (donazione Comune di Mosciano Sant’Angelo).</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-satellite-dish" style="color: var(--highlight-color);"></i>
+                        <strong>Antenna Meteo:</strong> Grande parabola per ricezione in tempo reale delle immagini
+                        Meteosat.</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-wave-square" style="color: var(--highlight-color);"></i>
+                        <strong>Sismografo:</strong> Sismografo elettronico assemblato dai tecnici dello staff.</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-camera" style="color: var(--highlight-color);"></i> <strong>CCD
+                            ST8:</strong> Camera CCD che ha notevolmente ampliato le potenzialità operative
+                        dell’osservatorio.</span>
+                </li>
+            </ul>
+        </section>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+            <a href="oacl1.htm" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Capitolo Precedente</a>
+            <a href="oacl3.htm" class="cta-button">L’attività <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

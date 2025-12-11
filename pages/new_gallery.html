@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Gallery - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html" class="active">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up" style="max-width: 1400px;"> <!-- Increased max-width for gallery -->
+
+        <div class="gallery-section">
+            <h1 class="gallery-title">New Gallery</h1>
+            <div class="category-buttons">
+                <button class="category-button" onclick="highlightCategory('nebulose')">Nebulose</button>
+                <button class="category-button" onclick="highlightCategory('galassie')">Galassie</button>
+                <button class="category-button" onclick="highlightCategory('comete')">Comete</button>
+                <button class="category-button" onclick="highlightCategory('ammassi')">Ammassi</button>
+                <button class="category-button" onclick="highlightCategory('sole-luna-pianeti')">Sole, Luna e
+                    Pianeti</button>
+                <button class="category-button" onclick="highlightCategory('grande-campo')">Grande campo</button>
+                <a href="old_gallery.html" class="category-button" style="background: var(--accent-color);">Vai alla Old
+                    Gallery</a>
+            </div>
+        </div>
+
+        <!-- Sezioni delle categorie -->
+        <div id="nebulose" class="category-section">
+            <h2>Nebulose</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('NCG_6992.jpg')">
+                    <div class="photo-title">Velo NGC 6992</div>
+                    <img src="../img/NCG_6992.jpg" alt="Foto di una nebulosa">
+                    <div class="photo-description">● Tel. Televue NP 101/5,4<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <!-- Seconda foto -->
+                <div class="photo-item" onclick="openModal('ncg6960.jpg')">
+                    <div class="photo-title">Velo NGC 6960</div>
+                    <img src="../img/ncg6960.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">● Tel. Newton 205/4 Canon 350 D<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Ngc281_dpp_elab3.jpg')">
+                    <div class="photo-title">NGC 281 Pacman Nebula</div>
+                    <img src="../img/Ngc281_dpp_elab3.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C </p>
+                        <p>● 115 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Bolla_NGC7635.jpg')">
+                    <div class="photo-title">NGC 7635 Bubble Nebula</div>
+                    <img src="../img/Bolla_NGC7635.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C </p>
+                        <p>● 120 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('IC1396prob.jpg')">
+                    <div class="photo-title">Nebulosa IC 1396 Proboscide</div>
+                    <img src="../img/IC1396prob.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8600 C </p>
+                        <p>● 145 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('M8elab.jpg')">
+                    <div class="photo-title">M8 Laguna</div>
+                    <img src="../img/M8elab.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C </p>
+                        <p>● 115 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('cocoon_pb_ni.jpg')">
+                    <div class="photo-title">Nebulosa Bozzolo</div>
+                    <img src="../img/cocoon_pb_ni.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C </p>
+                        <p>● 120 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('M_20_b.jpg')">
+                    <div class="photo-title">M20 Trifida</div>
+                    <img src="../img/M_20_b.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C </p>
+                        <p>● 85 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('iris.png')">
+                    <div class="photo-title">Iris Nebula, NGC 7023</div>
+                    <img src="../img/iris.png" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C </p>
+                        <p>● 210 min</p>
+                        <p>●Marco Di Biase</p>
+                        <p>●post processing Fabio Tempera</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="galassie" class="category-section">
+            <h2>Galassie</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('M 31.jpg')">
+                    <div class="photo-title">Galassia M 31</div>
+                    <img src="../img/M 31.jpg" alt="Foto di una galassia">
+                    <div class="photo-description">● Tel. Televue NP 101/5,4<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('M33_rielaborata.jpg')">
+                    <div class="photo-title">Galassia M 33 – NGC 598</div>
+                    <img src="../img/M33_rielaborata.jpg" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Tel. Televue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C</p>
+                        <p>● 110 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('AmmVerg.jpg')">
+                    <div class="photo-title">Amasso di galassie nella Vergine</div>
+                    <img src="../img/AmmVerg.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>● Televue NP 101/5,4 Canon 350 D</p>
+                        <p>● Sbig ST 8300 C </p>
+                        <p>● 45 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('androM31.JPG')">
+                    <div class="photo-title">Galassia di Andromeda M31</div>
+                    <img src="../img/androM31.JPG" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>● Tel. Newton 250/4</p>
+                        <p>● Camera ASI 294 MC</p>
+                        <p>● 120 min</p>
+                        <p>●Mario Caramanico</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m64marco.JPG')">
+                    <div class="photo-title">Galassia M 64</div>
+                    <img src="../img/m64marco.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue 101/5,4</p>
+                        <p>● Sbig ST 8300</p>
+                        <p>● 28 min</p>
+                        <p>● Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m6566.JPG')">
+                    <div class="photo-title">Galassie M 65-66 – NGC 3628</div>
+                    <img src="../img/m6566.JPG" alt="Foto di galassie">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300</p>
+                        <p>● 36 min</p>
+                        <p>● Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m101.JPG')">
+                    <div class="photo-title">Galassia M 101</div>
+                    <img src="../img/m101.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Tel. Tele Vue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C</p>
+                        <p>● 60 min</p>
+                        <p>● Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ngc891.JPG')">
+                    <div class="photo-title">Galassia NGC 891</div>
+                    <img src="../img/ngc891.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Tel. Newton 205/4</p>
+                        <p>● Sbig ST 8300 C</p>
+                        <p>● 40 min</p>
+                        <p>● Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="comete" class="category-section">
+            <h2>Comete</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('Cometa Atlas A3.jpeg')">
+                    <div class="photo-title">Cometa Altlas A3</div>
+                    <img src="../img/Cometa Atlas A3.jpeg" alt="Foto di una cometa">
+                    <div class="photo-description">● 75mm f/4.8 <br>● 8 sec a 1250 ISO <br>● Camera D5500 with a 18-300
+                        lens<p>●Paolo Vigilante</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('hb180.jpg')">
+                    <div class="photo-title">Com. Hale Bopp</div>
+                    <img src="../img/hb180.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">● Obb. Zeiss 180/2,8<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Holms.jpg')">
+                    <div class="photo-title">Com. Holmes 4.11.2006</div>
+                    <img src="../img/Holms.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">● Newton 205/4 Canon 350 D<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Holmes2.jpg')">
+                    <div class="photo-title">Com. Holmes 8.11.2006</div>
+                    <img src="../img/Holmes2.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">● Televue NP 101/5,4 Canon 350 D<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Neowise_11.07.jpg')">
+                    <div class="photo-title">Cometa C/2020 F3 (NEOWISE)</div>
+                    <img src="../img/Neowise_11.07.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Ob. Canon 350 D</p>
+                        <p>●Tamron 40mm</p>
+                        <p>●Ripresa dalla Maiella il 17.07.2020</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Flavioneowise.JPG')">
+                    <div class="photo-title">Cometa C/2020 F3 (NEOWISE)</div>
+                    <img src="../img/Flavioneowise.JPG" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Ripresa da Hotel Panorama il 11.07.2020</p>
+                        <p>●Flavio Passeri</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ComCatalina_C2013US10.jpg')">
+                    <div class="photo-title">Cometa Catalina C/2013 US10</div>
+                    <img src="../img/ComCatalina_C2013US10.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Vixen ED 103/5</p>
+                        <p>●CCD Sbig ST 8300 C</p>
+                        <p>●23.12.2015</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('pandstarssrit2.jpg')">
+                    <div class="photo-title">Cometa Panstarrs C/2011 L4</div>
+                    <img src="../img/pandstarssrit2.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Televue NP 101/5,4</p>
+                        <p>●CCD Sbig ST 8300 C</p>
+                        <p>●9.03.2013</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Ison_pb_med.jpg')">
+                    <div class="photo-title">Cometa Ison C/2012 S1</div>
+                    <img src="../img/Ison_pb_med.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Televue NP 101/5,4</p>
+                        <p>●CCD Sbig ST 8300 C</p>
+                        <p>●9.11.2013</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Jacques-3.jpg')">
+                    <div class="photo-title">Cometa Jacques C/2014 E2</div>
+                    <img src="../img/Jacques-3.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Televue NP 101/5,4</p>
+                        <p>●CCD Sbig ST 8300 C</p>
+                        <p>●18.08.2014</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Lovejoy_somma1elab_crop-2.jpg')">
+                    <div class="photo-title">Cometa Lovejoy C/20123 R1</div>
+                    <img src="../img/Lovejoy_somma1elab_crop-2.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Televue NP 101/5,4</p>
+                        <p>●CCD Sbig ST 8300 C</p>
+                        <p>●5.12.2013</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('wirt_dinamics2 copy.jpg')">
+                    <div class="photo-title">Cometa 46 P Wirtanen</div>
+                    <img src="../img/wirt_dinamics2 copy.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>●Televue NP 101/5,4</p>
+                        <p>●CCD Sbig ST 8300 C</p>
+                        <p>●8.12.2018</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="ammassi" class="category-section">
+            <h2>Ammassi</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('M45_dpp2elab.jpg')">
+                    <div class="photo-title">M 45 Pleiadi</div>
+                    <img src="../img/M45_dpp2elab.jpg" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Tel. Televue NP 101/5,4</p>
+                        <p>● Sbig ST 8300 C</p>
+                        <p>● 85 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('M-13.JPG')">
+                    <div class="photo-title">M 13</div>
+                    <img src="../img/M-13.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Tel. Newton 205/4</p>
+                        <p>● Sbig ST 8300 MC</p>
+                        <p>● 48 min</p>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sole-luna-pianeti" class="category-section">
+            <h2>Sole, Luna e Pianeti</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('Sole in Halpha.jpg')">
+                    <div class="photo-title">Sole in H-alpha</div>
+                    <img src="../img/Sole in Halpha.jpg" alt="Foto del Sole in H-alpha">
+                    <div class="photo-description">● Telescopio Lunt 50 Double Stack<br>● ASI178MM, 20% su 2000
+                        frames<br>● Elaborato con AUTOSTAKKERT<p>● Paolo Vigilante</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Superluna.jpeg')">
+                    <div class="photo-title">Superluna</div>
+                    <img src="../img/Superluna.jpeg" alt="Foto della Luna">
+                    <div class="photo-description">● Tel. Astrotech AT130EDT <br>● Camera ASI533MM Pro <br>● Baader
+                        planetarium UV/IR filter <br>● Processata con Autostakkert, imgPPG, and iPhoto.<p>● Paolo
+                            Vigilante</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Eclisse Luna 3.03.2007.jpg')">
+                    <div class="photo-title">Eclisse Luna 3.03.2007</div>
+                    <img src="../img/Eclisse Luna 3.03.2007.jpg" alt="Foto di Eclisse">
+                    <div class="photo-description">● Tel. Vixen ED 102/9 <br>● Canon 350D<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('fotogioveP.jpeg')">
+                    <div class="photo-title">Giove 16.11.2024</div>
+                    <img src="../img/fotogioveP.jpeg" alt="Foto di Giove">
+                    <div class="photo-description">● Tel. Astronomics AT130EDT <br>● TELEVUE Powermate 2.5x <br>●
+                        ASI224MM <br>● UV/IR Baader Planetarium <br>● Elab. Autostakkert per stacking <br>● Registax per
+                        i wavelets e bilancio RGB <br>● Paolo Vigilante</div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('eclisse2018.jpg')">
+                    <div class="photo-title">Eclisse Luna 27.07.2018</div>
+                    <img src="../img/eclisse2018.jpg" alt="Foto di Eclisse">
+                    <div class="photo-description">● L'eclisse più lunga del secolo <br>● Luna eclissata e Marte
+                        all'opposizione <br>● Da rifugio Pomilio<p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+
+                <div class="photo-item" onclick="openModal('Saturnoopp.JPG')">
+                    <div class="photo-title">Saturno opposizione Giugno 2017</div>
+                    <img src="../img/Saturnoopp.JPG" alt="Foto di Eclisse">
+                    <div class="photo-description">● Tel- C11 278/10<br>● ASI 120 MM <br>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Giovemarco.JPG')">
+                    <div class="photo-title">Giove 15-10-2022</div>
+                    <img src="../img/Giovemarco.JPG" alt="Foto di Eclisse">
+                    <div class="photo-description">● Tel. Cassegrain 200/15<br>● ASI 462 MC <br>
+                        <p>●Marco Di Biase</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('solarflare.gif')">
+                    <div class="photo-title">Eruzione solare 31 Maggio</div>
+                    <img src="../img/solarflare.gif" alt="Foto di Eclisse">
+                    <div class="photo-description">● Tel. AT 130 EDT <br>● Eruzione solare di classe M2.99 da AR4100. È
+                        la seconda eruzione di classe M8 che aveva già provocato un’aurora pochi giorni fa.<br>
+                        <p>● Paolo Vigilante</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="grande-campo" class="category-section">
+            <h2>Grande campo</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('vialattea.JPG')">
+                    <div class="photo-title">Via Lattea</div>
+                    <img src="../img/vialattea.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Nikon D5300</p>
+                        <p>● Nikkor 18-140mm a 18mm f/3.5</p>
+                        <p>● 10 minuti di esposizione</p>
+                        <p>● Fabio Tempera</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('andromeda.JPG')">
+                    <div class="photo-title">Galassia di Andromeda</div>
+                    <img src="andromeda.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Nikon D5300</p>
+                        <p>● Nikkor 70-300mm a 300mm f/6.3</p>
+                        <p>● 150 minuti di esposizione</p>
+                        <p>● Fabio Tempera</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('pleiadi.JPG')">
+                    <div class="photo-title">Pleiadi</div>
+                    <img src="pleiadi.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Nikon D5300</p>
+                        <p>● Nikkor 70-300mm a 300mm f/6.3</p>
+                        <p>● 270 minuti di esposizione</p>
+                        <p>● Fabio Tempera</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('orionecavallo.JPG')">
+                    <div class="photo-title">Orione e Testa di Cavallo</div>
+                    <img src="../img/orionecavallo.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Nikon D5300</p>
+                        <p>● Nikkor 70-300mm a 200mm f/5.6</p>
+                        <p>● 30 minuti di esposizione</p>
+                        <p>● Fabio Tempera</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Orione.JPG')">
+                    <div class="photo-title">Nebulosa di Orione </div>
+                    <img src="../img/Orione.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Nikon D5300</p>
+                        <p>● Nikkor 70-300mm a 300mm f/6.3</p>
+                        <p>● 30 minuti di esposizione</p>
+                        <p>● Fabio Tempera</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('nuberho.JPG')">
+                    <div class="photo-title">Nube di Rho Ophiuchi</div>
+                    <img src="nuberho.JPG" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>● Nikon D5300</p>
+                        <p>● Nikkor 70-300mm a 70mm f/4</p>
+                        <p>● 40 minuti di esposizione</p>
+                        <p>● Fabio Tempera</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal per la visualizzazione a schermo intero -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <img id="modal-image" src="" alt="Immagine a schermo intero">
+        </div>
+    </div>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Script per le descrizioni e modal
+        function highlightCategory(id) {
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.classList.remove('highlighted');
+            });
+
+            const categorySection = document.getElementById(id);
+            categorySection.classList.add('highlighted');
+
+            const offset = -100;
+            const elementPosition = categorySection.getBoundingClientRect().top + window.pageYOffset + offset;
+
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+
+            setTimeout(() => {
+                categorySection.classList.remove('highlighted');
+            }, 2000);
+        }
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+
+        function toggleSingleDescription(event, button) {
+            // Impedisci che il click si propaghi all'elemento genitore (che apre la modal)
+            event.stopPropagation();
+
+            // Trova la descrizione associata al pulsante
+            const description = button.previousElementSibling;
+
+            // Controlla se la descrizione è visibile o nascosta
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+                button.textContent = 'Nascondi Descrizione';
+            } else {
+                description.style.display = 'none';
+                button.textContent = 'Mostra Descrizione';
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+            fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+            document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

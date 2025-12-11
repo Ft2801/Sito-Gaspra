@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Felice di Lucoli - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Campo Felice di Lucoli</h1>
+
+        <section>
+            <p>Sulla splendida piana di Campo Felice, contornata dai monti Rotondo 2062 m.s.l.m., Puzzillo 2174
+                m.s.l.m., Cornacchia 2010 m.s.l.m., Cefalone 2142 m.s.l.m. è possibile ammirare un incantevole volta
+                stellata meta di sporadici WEA (week end astronomici) da parte dei gruppi astrofili Pescaresi e Piceni e
+                più spesso dagli astrofili aquilani.</p>
+
+            <p><img src="../img/image003.jpg" alt="Panorama di Campo Felice" class="left shadow-img"
+                    style="float: left; margin: 0 20px 20px 0; max-width: 100%; border-radius: 8px;">Spettacolare
+                ambiente naturale, la piana si trova a 1500 m.s.l.m ed è servita da un buon albergo "Rifugio Alantino",
+                aperto nei fine settimana e nei festivi, nonché durante il periodo estivo. Durante gli altri giorni è
+                tuttavia possibile prenotare il pernottamento da parte di comitive.</p>
+            <div style="clear: both;"></div>
+
+            <p>Il cielo è molto scuro anche perché le catene montuose praticamente circondano le postazioni a ridosso
+                del rifugio e offrono pure un discreto riparo dal vento; la città de L'Aquila, circa a 13 Km in linea
+                d'aria, inquina un po' l'orizzonte verso nordovest. Unica vera pecca è la temperatura abbastanza rigida
+                anche nei primi mesi autunnali; quando la serata è permeata di umidità ci è capitato di lottare con non
+                poca fatica contro la brina ghiacciata sugli strumenti (soprattutto le lastre correttrici sono molto
+                vulnerabili) e a nulla è valso adottare lunghi paraluci <img src="../img/image004.jpg"
+                    alt="Strumenti al Blockhaus" class="right shadow-img"
+                    style="float: right; margin: 0 0 20px 20px; max-width: 100%; border-radius: 8px;"> per proteggere le
+                ottiche quando le stesse venivano puntate verso lo Zenit.</p>
+            <div style="clear: both;"></div>
+
+            <p>Il sito è raggiungibile facilmente dall’autostrada A24 Roma-L’Aquila, uscita casello Torninparte/Campo
+                Felice al Km. 84,500 e percorrendo una comoda bretella di raccordo di circa 16 Km. Si arriva al rifugio.
+            </p>
+
+            <p>Dalla statale n. 17, superata l’Aquila in direzione Rieti bisogna voltare al bivio verso Lucoli sulla
+                provinciale 584.</p>
+
+            <p>Il posto è pure molto rinomato da un punto di vista turistico, poiché meta frequentata nei mesi invernali
+                dai fondisti.</p>
+
+            <div style="clear: both;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

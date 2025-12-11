@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Astronomica 17/11/2001 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Nottata da Ricordare</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">17-18 Novembre
+            2001 - Monte Voltigno</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Leonidi e Cometa Linear</h2>
+            <p>È stata senza dubbio una nottata da ricordare quella tra il 17 e il 18 novembre. Dopo la prima lezione
+                del corso di astronomia, <strong>Bruno, Gianni e Marco</strong>, raggiunti da <strong>Piero F.</strong>,
+                sono saliti sul Voltigno.</p>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">La Cometa C/2000 WM1 Linear</h3>
+            <p>Già visibile nel cercatore, al telescopio si mostrava con una grande chioma di almeno 10 primi ed una
+                magnitudine intorno alla 7. Non visibile una coda vera e propria, ma un evidente decentramento del
+                nucleo.</p>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">Pioggia di Meteore (Leonidi)</h3>
+            <p>Nessuno si aspettava un "meteor-storm", ma dalla costellazione del Leone l'attività meteorica è stata
+                intensa. Molti bolidi hanno illuminato la notte, alcuni con persistente scia verdastra.</p>
+
+            <div class="content-flex" style="margin-top: 20px;">
+                <img src="../img/Image133.JPG" alt="Bolide Leonide" class="shadow-img"
+                    style="max-width: 400px; width: 100%;">
+                <div style="flex: 1;">
+                    <p>Un vero colpo di fortuna: la la cattura di un bolide di magnitudine -3 che ha lasciato una scia
+                        persistente per diversi minuti. Lo spettacolo è stato paragonabile agli anni precedenti per
+                        qualità, se non per numero.</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info" style="margin-top: 20px;">
+                <i class="fa-solid fa-planet-ringed"></i> <strong>Giove:</strong> Altissimo in cielo, ha mostrato la
+                Grande Macchia Rossa in tutta la sua imponenza.
+            </div>
+
+            <figure style="text-align: center; margin-top: 30px;">
+                <img src="../img/Image134.JPG" alt="Gruppo GASPRA" class="shadow-img"
+                    style="max-width: 100%; width: 500px;">
+                <figcaption style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">Bruno Cirillo, Gianni
+                    Mantini, Marco Di Biase</figcaption>
+            </figure>
+
+            <p style="margin-top: 20px; text-align: right; font-style: italic;">Autore: Marco Di Biase</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

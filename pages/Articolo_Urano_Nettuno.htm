@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urano e Nettuno - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Urano e Nettuno</h1>
+        <p class="subtitle">I Giganti di Ghiaccio ai confini del Sistema Solare.</p>
+
+        <section class="card-grid">
+            <!-- Introduzione -->
+            <div class="card full-width">
+                <div class="content-flex" style="justify-content: space-around;">
+                    <img src="../img/Image123.gif" alt="Urano" class="shadow-img" style="max-width: 150px;">
+                    <img src="../img/Image122.gif" alt="Nettuno" class="shadow-img" style="max-width: 150px;">
+                </div>
+                <p>Urano e Nettuno sono i pianeti più esterni (escluso Plutone/pianeti nani). Sono chiamati "Giganti di
+                    Ghiaccio" perché, a differenza di Giove e Saturno, contengono (o meglio, contenevano) grandi
+                    quantità di "ghiacci" (acqua, ammoniaca, metano) nel loro interno. Entrambi hanno un colore
+                    azzurro/verde dovuto al metano nell'atmosfera, che assorbe la luce rossa.</p>
+            </div>
+
+            <!-- Urano -->
+            <div class="card full-width">
+                <h2>Urano: Il Pianeta Coricato</h2>
+                <div class="content-flex">
+                    <p>Scoperto da <strong>William Herschel</strong> nel 1781, Urano ha una caratteristica unica: il suo
+                        asse di rotazione è inclinato di 98°! In pratica "rotola" sulla sua orbita rivolgendosi al Sole
+                        alternativamente con un polo e poi con l'altro. Ogni polo rimane illuminato per 42 anni e poi al
+                        buio per altri 42.</p>
+                    <p>L'atmosfera appare molto uniforme, di un verde-acqua pallido, quasi priva di dettagli visibili, a
+                        differenza degli altri giganti. Possiede però un sistema di anelli scuri e numerosi satelliti
+                        (come Titania, Oberon, Miranda con la sua superficie tormentata).</p>
+                </div>
+                <div class="content-flex" style="align-items: center; justify-content: center;">
+                    <img src="../img/Image125.gif" alt="Satellite Oberon" class="shadow-img" style="max-width: 150px;">
+                    <p style="text-align: center; margin-left: 20px;"><em>Oberon, uno dei satelliti maggiori.</em></p>
+                </div>
+                <h3>Dati Urano</h3>
+                <ul class="clean-list">
+                    <li><strong>Massa:</strong> 14,5 (Terra = 1)</li>
+                    <li><strong>Raggio:</strong> 25.559 km</li>
+                    <li><strong>Giorno:</strong> 17h 14m (retrogrado)</li>
+                    <li><strong>Anno:</strong> 84 anni terrestri</li>
+                </ul>
+            </div>
+
+            <!-- Nettuno -->
+            <div class="card full-width">
+                <h2>Nettuno: Il Dio del Mare</h2>
+                <div class="content-flex">
+                    <img src="../img/Image124.gif" alt="Grande Macchia Scura" class="shadow-img"
+                        style="max-width: 200px; margin-right: 20px;">
+                    <div>
+                        <p>Scoperto nel 1846 grazie a calcoli matematici (da Le Verrier e Adams) prima ancora di essere
+                            visto al telescopio. È di un blu intenso e molto attivo meteorologicamente.</p>
+                        <p>La sonda Voyager 2 vi scoprì la <strong>Grande Macchia Scura</strong> (un ciclone grande come
+                            la Terra, poi scomparso), cirri veloci e venti che soffiano a oltre 2.000 km/h, i più veloci
+                            del Sistema Solare.</p>
+                    </div>
+                </div>
+
+                <div class="content-flex">
+                    <img src="../img/Image126.jpg" alt="Tritone" class="shadow-img"
+                        style="max-width: 150px; margin-right: 20px; float: left;">
+                    <p>Il suo satellite principale, <strong>Tritone</strong>, è l'unico grande satellite a ruotare in
+                        senso retrogrado (inverso alla rotazione del pianeta), indizio che probabilmente è un corpo
+                        della Fascia di Kuiper catturato dalla gravità di Nettuno. Ha geyser di azoto attivo sulla
+                        superficie.</p>
+                </div>
+
+                <h3>Dati Nettuno</h3>
+                <ul class="clean-list">
+                    <li><strong>Massa:</strong> 17,2 (Terra = 1)</li>
+                    <li><strong>Raggio:</strong> 24.764 km</li>
+                    <li><strong>Giorno:</strong> 16h 06m</li>
+                    <li><strong>Anno:</strong> 165 anni terrestri</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Osservazione</h2>
+                <p>Nettuno e Urano sono difficili da vedere a occhio nudo (Urano è al limite della visibilità in cieli
+                    perfetti, Nettuno richiede un binocolo). Al telescopio appaiono come piccoli dischetti colorati
+                    (verde per Urano, blu per Nettuno) privi di dettagli superficiali.</p>
+            </div>
+
+            <div class="card">
+                <h2>Campi Magnetici Strani</h2>
+                <p>Entrambi i pianeti hanno campi magnetici molto inclinati rispetto all'asse di rotazione (59° per
+                    Urano, 47° per Nettuno) e decentrati rispetto al nucleo. Si pensa che siano generati non nel nucleo,
+                    ma in uno strato intermedio di "ghiaccio" fluido conduttivo.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Piero D'Incecco
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

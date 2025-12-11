@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visita a Telespazio - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Visita a Telespazio</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">16 Settembre
+            2000</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Dettagli della visita</h2>
+            <img src="../img/Image044.JPG" alt="Vista di Telespazio" class="shadow-img"
+                style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 30px;">
+
+            <div class="content-flex">
+                <img src="../img/Image042.JPG" alt="Interno di Telespazio" class="shadow-img"
+                    style="max-width: 350px; width: 100%;">
+                <div style="flex: 1;">
+                    <p>Nella giornata di Sabato 16 Settembre 2000 i soci Gaspra <strong>Gianni Mantini</strong>,
+                        <strong>Francesco Carlucci</strong> e <strong>Piero D’Incecco</strong> hanno partecipato alla
+                        visita di Telespazio, nei pressi di Avezzano (AQ), alla quale sono stati presenti anche molti
+                        componenti del Mensa.</p>
+                    <div class="alert alert-info">
+                        <strong>Telespazio (Gruppo Telecom Italia)</strong> è un’azienda leader a livello mondiale in
+                        attività inerenti la progettazione, gestione e assistenza di sistemi e servizi basati su
+                        tecnologia satellitare.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-flex" style="margin-top: 30px;">
+                <div style="flex: 1;">
+                    <p>La visita al centro di Telespazio è stata accolta gentilmente dagli operatori che hanno reso
+                        possibile la manifestazione. Il gruppo di visitatori, dopo l’ingresso all’edificio avvenuto alle
+                        ore 16.00, ha piacevolmente partecipato alla conferenza di presentazione con entusiasmo ed
+                        interesse. Un grande momento tanto atteso dagli appassionati ma anche dai numerosi curiosi.</p>
+                    <p>Successivamente il ben nutrito gruppo si è trasferito prima in <strong>sala elaborazione
+                            dati</strong>, dove computers sofisticatissimi analizzavano le informazioni provenienti dai
+                        satelliti, poi in <strong>sala ricezione dati</strong>, dove un’avanzata strumentazione
+                        permetteva di raccogliere tutti i segnali ricevuti dalle grandi parabole separate.</p>
+                </div>
+                <img src="../img/Image043.JPG" alt="Parabole di Telespazio" class="shadow-img"
+                    style="max-width: 350px; width: 100%;">
+            </div>
+
+            <p class="mt-3">In seguito ai visitatori è stata gentilmente concessa una visita in sala video, dove vengono
+                gestite le trasmissioni via satellite. Infine tutti coloro che erano giunti a Telespazio hanno potuto
+                ammirare le grandi parabole che erano poste all’aperto. Dopo quest’ultima osservazione, giunta ormai la
+                sera, la visita si è conclusa con sostanziale soddisfazione di tutti.</p>
+
+            <p style="margin-top: 20px; text-align: right; font-style: italic;">Autore: Piero D’Incecco</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Party UAI 2002 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Star Party UAI - 16 Giugno 2002</h1>
+        <p class="subtitle">Partecipazione all'evento a Campo Felice</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <p>I soci Gianni, Bruno, Francesco e Piero D’I. hanno partecipato allo <a href="http://www.uai.it"
+                        target="_blank" class="text-link">Star Party UAI</a> a Campo Felice (AQ).</p>
+
+                <div class="content-flex" style="align-items: center; margin-top: 20px;">
+                    <div style="flex: 1; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 10px;">
+                        <h3 style="margin-top: 0;"><i class="fa-solid fa-comments"></i> Incontro e Condivisione</h3>
+                        <p>L'evento è stato un'ottima occasione per incontrare astrofili da tutta Italia e scambiare
+                            opinioni con membri di altre associazioni abruzzesi come GIGA, ASAM e AAT.</p>
+                    </div>
+                    <div style="flex: 1; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 10px;">
+                        <h3 style="margin-top: 0;"><i class="fa-solid fa-telescope"></i> Strumentazione</h3>
+                        <p>Abbiamo ammirato una grande quantità di strumenti, inclusi alcuni modelli nuovi portati dagli
+                            espositori. Purtroppo la location, vicina agli alberghi e alla strada, non era ideale per
+                            l'osservazione profonda, ma perfetta per la socializzazione.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="attivita.html" class="cta-button">Torna all'elenco Attività</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

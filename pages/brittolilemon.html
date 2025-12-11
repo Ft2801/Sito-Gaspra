@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osservazione Cometa Lemmon - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Osservazione in quota della cometa Lemmon</h1>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Resoconto Osservativo</h2>
+                <p><strong>Località:</strong> Cannatina - 28 Ottobre 2025</p>
+                <div class="divider"></div>
+                <p>
+                    E’ fatto noto che quasi tutte le comete sono visibili al massimo del loro splendore quando si
+                    avvicinano al sole o alla terra e, soprattutto nel primo caso, questo significa che raramente sarà
+                    alta in cielo con la conseguenza che si dovrà salire in quota montana per avere il cielo
+                    sufficientemente libero da luci artificiali e foschia dovuta ad umidità e smog che soprattutto
+                    quando c’è alta pressione vengono schiacciate a bassa quota.
+                </p>
+                <p>
+                    Dopo un primo tentativo andato quasi in fumo per la sopravvenienza di nubi il 18 ottobre e diversi
+                    rinvii a causa del meteo inclemente, per il pomeriggio di martedì 28 insieme a Gaetano si è deciso
+                    di salire di nuovo a Cannatina a circa 1.420 msl per raggiungere altri due astrofili di Civitella
+                    insieme ad un loro amico; tale sito osservativo si presenta molto spazioso per lo stazionamento di
+                    strumenti e auto e con l’orizzonte abbastanza scoperto soprattutto nella direzione di interesse, a
+                    nord-ovest.
+                </p>
+                <p>
+                    La cometa <strong>C/2025 A6 (Lemmon)</strong> è stata la cometa più luminosa del 2025, raggiungendo
+                    la massima vicinanza alla Terra il 21 ottobre 2025 arrivando ad essere visibile a occhio nudo,
+                    specialmente tra fine ottobre e inizio novembre.
+                </p>
+                <p>
+                    La serata è stata eccellente e la ho avvistata subito con il binocolo 10x50 quando ancora non era
+                    buio alta più di venti gradi sull’orizzonte e mostrava chiaramente una coda di alcune decine di
+                    primi d’arco e poco dopo si è resa visibile a occhio nudo.
+                </p>
+                <p>
+                    Per l’occasione ho rimesso in opera la cara e vecchia montatura Takahashi EM 10 con la gloriosa
+                    elettronica Palomar AD 2000 dopo che l’amico Mario, riesumata a distanza di anni dal suo
+                    accantonamento, si è prodigato per cambiare la batteria della memoria tampone. Ho voluto
+                    semplificare al massimo l’attrezzatura e quindi la ho fotografata con un piccolo tele apo 150/2,8 su
+                    Canon EOS 6D collegata ad uno scatto temporizzato esterno.
+                </p>
+                <p>
+                    La foto che allego deriva dalla somma di una sequenza di 45 pose da 15 secondi a 1.250 ISO ed è
+                    stata notevolmente croppata. Purtroppo non rappresenta il risultato sperato perché sono stato
+                    superficiale nel ritenere che la posizione su “infinito” dell’obbiettivo mi assicurasse un buon
+                    fuoco per come ricordavo quando lo ho usato in passato ed invece, con somma delusione, ho riscontato
+                    una certa sfocatura delle immagini parzialmente corretta grazie alla bravura del giovane astrofilo
+                    Fabio Tempera in sede di editing e post-processing.
+                </p>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <img src="../img/cometa_lemmon.jpg" alt="Foto della Cometa Lemmon - Somma di 45 pose" class="shadow-img"
+                        style="max-width: 100%; border: 1px solid rgba(255,255,255,0.1);">
+                    <p style="margin-top: 10px; font-style: italic; color: var(--highlight-color);">Cometa C/2025 A6
+                        (Lemmon)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

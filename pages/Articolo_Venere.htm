@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venere - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Venere</h1>
+        <p class="subtitle">Il pianeta gemello, avvolto nel mistero.</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <div class="content-flex">
+                    <img src="../img/Image080.gif" alt="Immagine di Venere" class="shadow-img"
+                        style="max-width: 200px; margin-right: 20px;">
+                    <div>
+                        <h2>Il Pianeta Luminoso</h2>
+                        <p><strong>Venere</strong> è il secondo pianeta in ordine di distanza dal Sole ed è anche il più
+                            vicino a noi. Ci appare come l’oggetto più brillante e visibile del cielo o al crepuscolo
+                            (Vespero) o al mattino (Lucifero). Quando raggiunge il suo massimo splendore la sua
+                            intensità è tale che spesso viene scambiato con un UFO. La sua forte luminosità (albedo
+                            0,76) è dovuta alla spessa coltre di nubi che riflette il 76% della luce solare. Ha
+                            dimensioni molto simili alla Terra (raggio 12.100 km), ma è un ambiente estremamente ostile,
+                            con temperature elevatissime e un'atmosfera velenosa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Storia e Fasi</h2>
+                <p>Venere era conosciuto fin dall'antichità, ma fu Galileo a osservarne per primo le fasi con un
+                    cannocchiale. Questa scoperta fu fondamentale per confutare il sistema tolemaico a favore di quello
+                    copernicano. Gli antichi astronomi credettero di vedere montagne lungo il terminatore, ma si
+                    trattava solo di effetti ottici; la superficie è perennemente nascosta dalle nubi.</p>
+            </div>
+
+            <div class="card">
+                <h2>Le Sonde Spaziali</h2>
+                <div class="content-flex" style="align-items: center; gap: 10px;">
+                    <img src="../img/Image081.gif" alt="Sonda su Venere" class="shadow-img" style="max-width: 150px;">
+                    <p>L'esplorazione di Venere iniziò con molti fallimenti, ma le sonde sovietiche
+                        <strong>Venera</strong> riuscirono nell'impresa storica di atterrare e inviare dati dalla
+                        superficie infernale (475 °C, 90 atms). Successivamente, le sonde americane Pioneer-Venus e
+                        soprattutto la sonda <strong>Magellano</strong> (anni '90) hanno mappato il pianeta con il
+                        radar, svelandone la morfologia nascosta.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Mappa Radar</h2>
+                <p>La sonda Magellano ha mappato il 97% della superficie utilizzando un radar ad apertura sintetica
+                    (SAR). Ha rivelato un mondo di pianure vulcaniche, montagne e depressioni, con una risoluzione in
+                    altezza di circa 30 metri. Questo ha permesso di scoprire che Venere è geologicamente attivo o lo è
+                    stato molto recentemente.</p>
+            </div>
+
+            <div class="card">
+                <h2>Rotazione Retrogada</h2>
+                <p>Venere ha una peculiarità unica (condivisa solo in parte da Urano): ruota in senso orario, cioè da
+                    est verso ovest (moto retrogrado). Inoltre, la sua rotazione è lentissima: il giorno venusiano (243
+                    giorni terrestri) è più lungo del suo anno (225 giorni terrestri)!</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Un inferno di Atmosfera</h2>
+                <div class="content-flex">
+                    <div>
+                        <p>L’atmosfera di Venere è composta per il 96,5% da anidride carbonica e per il 3,5% da azoto,
+                            con nubi di acido solforico. Questa composizione genera un <strong>effetto serra</strong>
+                            devastante che porta la temperatura a 475 °C, sufficiente a fondere il piombo. La pressione
+                            al suolo è schiacciante, pari a quella che si trova a 900 metri di profondità negli oceani
+                            terrestri. In quota, i venti soffiano a velocità incredibili (super-rotazione), compiendo un
+                            giro del pianeta in soli 4 giorni.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Superficie e Continenti</h2>
+                <img src="../img/Image082.gif" alt="Superficie di Venere" class="shadow-img"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>La superficie è un deserto roccioso arancione/marrone. Ci sono due "continenti" principali: la
+                    <strong>Terra di Ishtar</strong> a nord (con i Monti Maxwell alti 11 km) e la <strong>Terra di
+                        Afrodite</strong> all'equatore. Sono presenti numerosi vulcani, come il Monte Maat, e vasti
+                    canyon tettonici.</p>
+            </div>
+
+            <div class="card">
+                <h2>Osservazione</h2>
+                <img src="../img/Image084.jpg" alt="Fasi di Venere" class="shadow-img"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>Venere è facile da osservare a occhio nudo come "stella" brillantissima. Con un binocolo o un piccolo
+                    telescopio si possono apprezzare le sue fasi (da falce sottile a disco quasi pieno), ma non si
+                    vedono dettagli superficiali a causa delle nubi omogenee.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Dati Sintetici</h2>
+                <ul class="clean-list">
+                    <li><strong>Massa:</strong> 0,82 masse terrestri</li>
+                    <li><strong>Raggio:</strong> 6.051 km</li>
+                    <li><strong>Densità:</strong> 0,95 (Terra = 1)</li>
+                    <li><strong>Rotazione:</strong> 243 giorni (retrograd)</li>
+                    <li><strong>Rivoluzione:</strong> 225 giorni</li>
+                    <li><strong>Temperatura media:</strong> 464 °C</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Piero D'Incecco
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

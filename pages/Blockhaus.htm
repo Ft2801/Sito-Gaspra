@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockhaus (Chieti) - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Blockhaus (Chieti)</h1>
+
+        <div class="card-grid" style="grid-template-columns: 1fr;">
+            <div class="card">
+                <div class="content-flex">
+                    <div style="flex: 1;">
+                        <h3 style="color: var(--highlight-color); margin-bottom: 20px;"><i
+                                class="fa-solid fa-mountain"></i> Il Sito Osservativo</h3>
+                        <p>Situato a circa <strong style="color: var(--text-color);">2140 metri s.l.m.</strong>, il sito
+                            del Blockhaus è forse il più alto sito osservativo del Centro Italia. Situato nella
+                            provincia di Chieti, è raggiungibile da Pescara con circa un’ora di macchina.</p>
+
+                        <div class="alert alert-info" style="margin-top: 20px;">
+                            <i class="fa-solid fa-route" style="margin-right: 10px;"></i>
+                            <strong>Come Arrivare:</strong> Da Pescara procedere verso Francavilla al Mare, svoltare
+                            sulla statale 649 in direzione Pretoro. Giunti a Pretoro salire verso Passo Lanciano,
+                            proseguire oltre gli impianti sciistici "Mammarosa" fino al rifugio Pomilio. La strada si
+                            interrompe dopo mezzo chilometro, permettendo lo stazionamento degli strumenti. Dall'A25:
+                            uscita Scafa (PE), seguire per Passo Lanciano via Lettomanoppello.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-temperature-low"></i> Condizioni Metereologiche e Stagionali</h3>
+                <ul class="clean-list">
+                    <li><i class="fa-regular fa-snowflake"></i> <strong>Inverno:</strong> Il sito è praticamente
+                        irraggiungibile per la neve (spesso 2-3 metri oltre l'albergo Mammarosa).</li>
+                    <li><i class="fa-regular fa-sun"></i> <strong>Estate:</strong> Molto frequentato per la sua
+                        accessibilità e l'orizzonte libero a 360°. Temperatura rigida anche d'estate con forti
+                        escursioni termiche (30°C).</li>
+                    <li><i class="fa-solid fa-wind"></i> <strong>Vento:</strong> Sito famoso per il forte vento e rapido
+                        formarsi di nubi temporalesche estive.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-star"></i> Qualità del Cielo</h3>
+                <p>Di notte si riesce ad oltrepassare tranquillamente la <strong>sesta magnitudine</strong>, soprattutto
+                    in direzione sud (Appennino) che non presenta inquinamento luminoso.</p>
+                <div class="content-flex" style="align-items: flex-start; margin-top: 20px;">
+                    <div style="flex: 1;">
+                        <h4 style="color: var(--highlight-color); font-size: 1.1rem; margin-bottom: 15px;">Panorama:
+                        </h4>
+                        <ul class="clean-list">
+                            <li><i class="fa-solid fa-arrow-up"></i> <strong>Nord:</strong> Val Pescara (inquinamento
+                                luminoso presente, ma buona trasparenza per l'altitudine).</li>
+                            <li><i class="fa-solid fa-arrow-down"></i> <strong>Sud:</strong> Monte Amaro (2790m) e cielo
+                                molto buio. Visibili in condizioni eccezionali le luci della Croazia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="text-align: center; border-left: 4px solid var(--accent-color);">
+                <p style="font-style: italic;">"Il sito permette dunque un’ottima trasparenza del cielo, ma le
+                    temperature spesso estreme non lo fanno rientrare tra i più frequentati dal gruppo."</p>
+                <p style="margin-top: 10px; color: var(--highlight-color);">— Bruno Cirillo</p>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="osservatori2.html" class="btn-glass" style="display: inline-flex; justify-content: center;">
+                <i class="fa-solid fa-arrow-left"></i> Torna agli Osservatori
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

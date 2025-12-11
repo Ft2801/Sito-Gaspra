@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solare - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .solar-system {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .planet-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            text-align: center;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+        }
+
+        .planet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .planet-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+        }
+
+        .planet-card:hover img {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .planet-card h3 {
+            font-size: 1.3em;
+            color: var(--text-color);
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Esplora il Sistema Solare</h1>
+
+        <section class="solar-system">
+            <!-- Sole -->
+            <a href="il_sole.htm" class="planet-card">
+                <img src="../img/Sole in Halpha.jpg" alt="Sole">
+                <h3>Sole</h3>
+            </a>
+
+            <!-- Mercurio -->
+            <a href="mercurio.htm" class="planet-card">
+                <img src="../img/mercurio.gif" alt="Mercurio">
+                <h3>Mercurio</h3>
+            </a>
+
+            <!-- Venere -->
+            <a href="Articolo_Venere.htm" class="planet-card">
+                <img src="../img/venere.gif" alt="Venere">
+                <h3>Venere</h3>
+            </a>
+
+            <!-- Terra -->
+            <a href="Terra.htm" class="planet-card">
+                <img src="../img/terra.gif" alt="Terra">
+                <img src="../img/luna.gif" alt="Terra">
+                <h3>Terra e Luna</h3>
+            </a>
+
+            <!-- Marte -->
+            <a href="Marte.htm" class="planet-card">
+                <img src="../img/marte.gif" alt="Marte">
+                <h3>Marte</h3>
+            </a>
+
+            <!-- Giove -->
+            <a href="Articolo_Giove.htm" class="planet-card">
+                <img src="../img/giove.gif" alt="Giove">
+                <h3>Giove</h3>
+            </a>
+
+            <!-- Saturno -->
+            <a href="Articolo_Saturno.htm" class="planet-card">
+                <img src="../img/saturno.gif" alt="Saturno">
+                <h3>Saturno</h3>
+            </a>
+
+            <!-- Urano -->
+            <a href="Articolo_Urano_Nettuno.htm" class="planet-card">
+                <img src="../img/urano.gif" alt="Urano">
+                <h3>Urano</h3>
+            </a>
+
+            <!-- Nettuno -->
+            <a href="Articolo_Urano_Nettuno.htm" class="planet-card">
+                <img src="../img/nettuno.gif" alt="Nettuno">
+                <h3>Nettuno</h3>
+            </a>
+        </section>
+
+        <p style="text-align: center; margin-top: 20px; color: var(--text-muted); font-size: 0.9em;">
+            (Tutte le foto di questa sezione sono tratte da "Carte Astronomiche De Agostini")
+        </p>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+            fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+            document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

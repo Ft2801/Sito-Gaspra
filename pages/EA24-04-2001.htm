@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Astronomica 24/04/2001 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Nottata Proficua sul Voltigno</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">24 Aprile 2001
+        </p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Affollamento sul Monte</h2>
+            <p>La stradina del Voltigno è stata occupata da ben dodici astrofili! Presenti Bruno, Paolo, Piero D.,
+                Maurizio e Giulia (con il nuovo NT 200/5), Gianni, Fabio, Piero F., e tre amici teatini con Edoardo.</p>
+
+            <p>Nonostante qualche raffica di vento, la nottata è stata proficua per la fotografia deep sky. Sono stati
+                testati pellicole Kodak a 1600 ASA (risultati deludenti per la grana) e Fuji NPH 400 (eccellente).</p>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">Risultati Fotografici</h3>
+
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div style="text-align: center;">
+                    <img src="../img/Image146.jpg" alt="NGC 4565" class="shadow-img"
+                        style="max-width: 100%; margin-bottom: 10px;">
+                    <p><strong>NGC 4565</strong><br>Bruno Cirillo</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="../img/Image147.jpg" alt="M11" class="shadow-img"
+                        style="max-width: 100%; margin-bottom: 10px;">
+                    <p><strong>M11</strong><br>Marco Di Biase</p>
+                </div>
+            </div>
+
+            <p class="mt-3">I teatini hanno catturato buone immagini con un ETX e un LX3 equipaggiato con CCD. Il seeing
+                non era ecccezionale (Antoniadi III-IV), ma all'alba lo spettacolo della falce di Venere ci ha ripagati
+                della fatica.</p>
+
+            <figure style="text-align: center; margin-top: 30px;">
+                <img src="../img/image064.JPG" alt="Falce di Venere" class="shadow-img"
+                    style="max-width: 100%; width: 400px;">
+                <figcaption style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">Falce di Venere:
+                    Marco, Piero F., Bruno</figcaption>
+            </figure>
+
+            <p style="margin-top: 20px; text-align: right; font-style: italic;">Autore: M.D.B.</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

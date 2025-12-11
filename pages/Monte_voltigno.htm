@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Voltigno - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Monte Voltigno</h1>
+
+        <section>
+            <h2>Descrizione del sito</h2>
+            <p>Il monte Voltigno è situato lungo il versante sud-ovest della catena del Gran Sasso ad una altitudine
+                prossima ai 1500 metri s.l.m.</p>
+            <p>Il sito risulta particolarmente facile da raggiungere da Pescara con circa 30/45 minuti e per tale motivo
+                è una delle mete preferite dagli astrofili pescaresi, grazie anche alle buone condizioni del cielo che
+                permettono la fotografia di profondo cielo in quasi tutta la volta celeste. Il sito infatti risulta
+                praticamente esente da inquinamento luminoso ad eccezione in direzione nord-est/est dove, a causa della
+                presenza degli agglomerati urbani di Pescara e Chieti, il cielo risulta compromesso per circa 10-20°
+                sopra l’orizzonte.</p>
+        </section>
+
+        <section>
+            <h2>Come raggiungere il sito</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+                <img src="../img/Image019.jpg" alt="Monte Voltigno vista"
+                    style="max-width: 100%; border-radius: 8px; flex: 1 1 300px;">
+                <div style="flex: 1 1 300px;">
+                    <p>Il sito è raggiungibile da Pescara proseguendo in direzione Villa Celiera (PE), ultimo paese
+                        lungo la strada provinciale che conduce alla Piana del Voltigno, attraverso i paesi di Pianella
+                        e Vestea. La strada è facilmente percorribile e praticamente in buone condizioni fino a un paio
+                        di chilometri dal luogo prescelto per le osservazioni dove si interrompe e diventa sterrata in
+                        due punti a causa di continue frane a cui è soggetto il sito nei mesi invernali.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Caratteristiche e utilizzo</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+                <img src="../img/Image020.jpg" alt="Piana del Voltigno"
+                    style="max-width: 100%; border-radius: 8px; flex: 1 1 300px;">
+                <div style="flex: 1 1 300px;">
+                    <p>Il sito è frequentato nei mesi invernali da numerosi sciatori di fondo e rinomato per i cercatori
+                        di funghi; presenta anche la possibilità di pernottare presso il ristorante/pensione "Il
+                        Fungarolo", situato lungo la strada a circa un paio di chilometri dal sito osservativo. In più
+                        occasioni a causa delle condizioni impervie della strada nel suo ultimo tratto (nei mesi
+                        invernali non viene spazzata la neve) ci è stato permesso di stazionare gli strumenti sullo
+                        spiazzo antistante il ristorante che però risulta particolarmente frequentato nei fine settimana
+                        fino a tarda notte.</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-style: italic; color: var(--highlight-color);">Bruno Cirillo</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

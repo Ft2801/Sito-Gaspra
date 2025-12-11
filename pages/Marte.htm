@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marte - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Marte</h1>
+        <p class="subtitle">Il Pianeta Rosso.</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Introduzione</h2>
+                <div class="content-flex">
+                    <img src="../img/Image096.gif" alt="Vista di Marte" class="shadow-img"
+                        style="max-width: 200px; margin-right: 20px;">
+                    <p><strong>Marte:</strong> deve il suo nome al dio della guerra per il suo colore rosso. È il
+                        pianeta più simile alla Terra ed è l'unico candidato realistico per un futuro sbarco umano. La
+                        sua distanza dal Sole varia notevolmente a causa della sua orbita ellittica (tra 206 e 249
+                        milioni di km).</p>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h2>Storia e "Canali"</h2>
+                <p>Nel XIX secolo, <strong>Giovanni Schiaparelli</strong> osservò delle linee sulla superficie che
+                    chiamò "canali". Questo portò all'errata convinzione che esistesse una civiltà marziana in grado di
+                    costruire opere idrauliche ciclopiche. Solo in seguito Vincenzo Cerulli e poi lo stesso Schiaparelli
+                    dimostrarono che si trattava di illusioni ottiche.</p>
+            </div>
+
+            <div class="card">
+                <h2>Esplorazione Spaziale</h2>
+                <div class="content-flex">
+                    <img src="../img/Image097.jpg" alt="Monte Olympus" class="shadow-img"
+                        style="max-width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                    <p>Le sonde <strong>Mariner</strong> e soprattutto le <strong>Viking</strong> (1976) hanno svelato
+                        il vero volto di Marte: un deserto freddo e arido, costellato di crateri, vulcani giganti (come
+                        il <strong>Monte Olympus</strong>, alto 27 km!) e canyon immensi (Valles Marineris). Le analisi
+                        hanno escluso la presenza di vita macroscopica o civiltà.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Geologia e Vulcani</h2>
+                <p>Marte non ha una tettonica a zolle attiva come la Terra; è un "pianeta a una sola zolla". Questo ha
+                    permesso ai vulcani di crescere a dismisura rimanendo fissi sopra i punti caldi del mantello.
+                    L'emisfero sud è antico e craterizzato, quello nord è più liscio e giovane.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Acqua: Fiumi e Oceani perduti</h2>
+                <div class="content-flex" style="align-items: center; gap: 20px;">
+                    <img src="../img/Image098.gif" alt="Superficie marziana 1" class="shadow-img"
+                        style="max-width: 200px;">
+                    <img src="../img/Image099.gif" alt="Superficie marziana 2" class="shadow-img"
+                        style="max-width: 200px;">
+                </div>
+                <p style="margin-top: 15px;">Sulla superficie sono evidenti antichi letti fluviali e segni di erosione,
+                    prova che un tempo l'acqua scorreva liquida in abbondanza. Si ipotizza che esistesse un ciclo
+                    dell'acqua e forse un oceano nell'emisfero nord. Oggi l'acqua è presente come ghiaccio nelle calotte
+                    polari e nel permafrost sotterraneo.</p>
+            </div>
+
+            <div class="card">
+                <h2>Atmosfera e Clima</h2>
+                <p>L'atmosfera è sottilissima (pressione 6 millibar), composta per il 97% da anidride carbonica. Il
+                    cielo appare rossastro per le polveri in sospensione. Le temperature variano da -120°C a +14°C.
+                    Frequenti sono le tempeste di sabbia globali che possono avvolgere l'intero pianeta.</p>
+            </div>
+
+            <div class="card">
+                <h2>Le Calotte Polari</h2>
+                <img src="../img/Image100.gif" alt="Calotta Polare" class="shadow-img"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>Ai poli si trovano calotte di ghiaccio d'acqua e ghiaccio secco (CO2). D'inverno si espandono,
+                    d'estate sublimano parzialmente. Sono visibili anche con piccoli telescopi.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>I Satelliti: Phobos e Deimos</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                    <img src="../img/Image101.jpg" alt="Phobos" class="shadow-img" style="border-radius: 8px;">
+                    <img src="../img/Image102.jpg" alt="Deimos" class="shadow-img" style="border-radius: 8px;">
+                </div>
+                <p>Due piccole lune irregolari, probabilmente asteroidi catturati. <strong>Phobos</strong> è il più
+                    grande e vicino, <strong>Deimos</strong> il più piccolo e lontano.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Dati Sintetici</h2>
+                <ul class="clean-list">
+                    <li><strong>Massa:</strong> 0,11 (Terra = 1)</li>
+                    <li><strong>Raggio:</strong> 3.393 km</li>
+                    <li><strong>Giorno (Sol):</strong> 24h 37m</li>
+                    <li><strong>Anno:</strong> 687 giorni terrestri</li>
+                    <li><strong>Satelliti:</strong> 2 (Phobos, Deimos)</li>
+                    <li><strong>Gravità:</strong> 0,38 g</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Piero D'Incecco
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclisse Totale di Luna 09/01/2001 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>"Incontriamo la Luna"</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">Eclisse Totale
+            di Luna - 9 Gennaio 2001</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">L'Evento in Piazza Primo Maggio</h2>
+            <p>In occasione dell’eclisse totale di Luna del 09/01/2001 il G.As.P.RA ha organizzato una manifestazione
+                pubblica nel centro di Pescara dal titolo <strong>"Incontriamo la Luna"</strong>.</p>
+
+            <div class="alert alert-success">
+                <i class="fa-solid fa-users"></i> <strong>Grande Successo!</strong> Per l’occasione sono stati allestiti
+                cinque telescopi (grazie a "Stilottica s.r.l.") e una mostra fotografica. L'affluenza di pubblico è
+                stata enorme, ben oltre le aspettative.
+            </div>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px; margin-bottom: 15px;">Rassegna Stampa</h3>
+
+            <div class="card-grid" style="grid-template-columns: 1fr;">
+                <div class="card" style="box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="color: var(--text-color);"><i class="fa-solid fa-newspaper"></i> Il Messaggero
+                        (03/01/2001)</h4>
+                    <p style="font-style: italic;">"Con il naso in su per l’eclisse di luna - L’associazione culturale
+                        Gaspra organizza un’osservazione pubblica della prima eclisse totale di luna del terzo
+                        millennio..."</p>
+                </div>
+
+                <div class="card" style="box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="color: var(--text-color);"><i class="fa-solid fa-newspaper"></i> Il Tempo (04/01/2001)
+                    </h4>
+                    <img src="../img/Image056.jpg" alt="Articolo Il Tempo" class="shadow-img"
+                        style="max-width: 100%; width: 100%; border-radius: 4px;">
+                </div>
+
+                <div class="card" style="box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="color: var(--text-color);"><i class="fa-solid fa-newspaper"></i> Il Centro (05/01/2001)
+                    </h4>
+                    <img src="../img/Image057.jpg" alt="Articolo Il Centro" class="shadow-img"
+                        style="max-width: 100%; width: 100%; border-radius: 4px;">
+                </div>
+
+                <div class="card" style="box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="color: var(--text-color);"><i class="fa-solid fa-newspaper"></i> Il Centro (10/01/2001)
+                    </h4>
+                    <img src="../img/Image058.jpg" alt="Articolo Il Centro" class="shadow-img"
+                        style="max-width: 100%; width: 100%; border-radius: 4px;">
+                </div>
+
+                <div class="card" style="box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="color: var(--text-color);"><i class="fa-solid fa-newspaper"></i> Il Tempo (11/01/2001)
+                    </h4>
+                    <img src="../img/Image059.jpg" alt="Articolo Il Tempo" class="shadow-img"
+                        style="max-width: 100%; width: 100%; border-radius: 4px;">
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

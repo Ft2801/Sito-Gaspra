@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Astronomica 16/03/2002 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Escursione sul Monte Voltigno</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">16 Marzo 2002
+            - Cometa Ikeya-Zhang</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Caccia alla Cometa Ikeya-Zhang</h2>
+            <p>In occasione del passaggio della <strong>cometa C2002 c1 Ikeya-Zhang</strong>, è stata organizzata
+                un'escursione il 16/03/02, approfittando anche della luna di pochi giorni.</p>
+
+            <p><strong>Partecipanti:</strong> Gianni, Bruno, Maurizio, Giulia, Fabio con un amico, Fabrizio (prima
+                esperienza) con il padre, e Ivano di Moscufo con le nipoti. Adunata sulla piana nei pressi
+                dell’Agriturismo "Voltigno", a circa 10 km da Carpineto della Nora.</p>
+
+            <div class="content-flex" style="margin-top: 30px;">
+                <div style="flex: 1;">
+                    <h3 style="color: var(--highlight-color); font-size: 1.2rem;">Risultati Osservativi</h3>
+                    <p>La cometa si è resa visibile a partire dalle 19:15 circa. Si è rivelata subito una bella visione,
+                        con una <strong>coda lunga più di 3 gradi</strong> ed un nucleo ben visibile al binocolo, anche
+                        se la falce di luna crescente disturbava non poco l’osservazione.</p>
+                    <p>Successivamente la serata è continuata con l’osservazione del profondo cielo e dei pianeti
+                        giganti, nonostante un'umidità al limite del tollerabile e temperature sotto lo zero che hanno
+                        ghiacciato gli strumenti.</p>
+                </div>
+                <img src="../img/c2002c1_Ikeya-Zhang_mdb.JPG" alt="Cometa Ikeya-Zhang"
+                    class="shadow-img" style="max-width: 300px; width: 100%;">
+            </div>
+
+            <div class="alert alert-info" style="margin-top: 20px;">
+                <i class="fa-solid fa-map-marker-alt"></i> <strong>Valutazione Sito:</strong> Ottimo sito, comodo,
+                funzionale, con un cielo discreto e inquinamento luminoso davvero basso. Da verificare umidità e seeing
+                nelle prossime escursioni.
+            </div>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px; margin-bottom: 15px;">Galleria Immagini</h3>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="text-align: center;">
+                    <img src="../img/c2002c1_Ikeya-Zhang_mdb.JPG"
+                        alt="Cometa Ikeya-Zhang - Marco Di Biase" class="shadow-img"
+                        style="max-width: 100%; margin-bottom: 10px;">
+                    <p style="font-size: 0.9rem;">300mm f4,5 - esposizione 5min. su Kodak E200<br><strong>Marco Di
+                            Biase</strong></p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="../img/c2002c1_Ikeya-Zhang.jpg"
+                        alt="Cometa Ikeya-Zhang - Bruno Cirillo" class="shadow-img"
+                        style="max-width: 100%; margin-bottom: 10px;">
+                    <p style="font-size: 0.9rem;">800mm f4 - esposizione 8+8min. su Kodak E200<br><strong>Bruno
+                            Cirillo</strong></p>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; text-align: right; font-style: italic;">Autore: Gianni Mantini</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

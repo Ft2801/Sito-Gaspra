@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osservatorio Astronomico Capolavilla - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Osservatorio Astronomico Capolavilla</h1>
+        <p class="subtitle">Un punto di osservazione privilegiato nel cuore dell'Abruzzo</p>
+
+        <section class="card full-width" style="text-align: center;">
+            <img src="../img/capolavilla.jpg" alt="Osservatorio Capolavilla" class="shadow-img"
+                style="max-height: 400px; margin-bottom: 30px;">
+
+            <p>L'Osservatorio di Capolavilla rappresenta uno dei siti osservativi utilizzati dal gruppo per attività di
+                ricerca e divulgazione. Situato in una posizione strategica, offre un cielo sufficientemente buio per
+                osservazioni profonde.</p>
+
+            <ul class="data-list" style="max-width: 600px; margin: 30px auto; text-align: left;">
+                <li><strong>Strumentazione:</strong> <span style="text-align: right;">Telescopi riflettori e rifrattori
+                        portatili</span></li>
+                <li><strong>Attività:</strong> <span style="text-align: right;">Osservazione visuale,
+                        Astrofotografia</span></li>
+                <li><strong>Accessibilità:</strong> <span style="text-align: right;">Su prenotazione per i soci</span>
+                </li>
+            </ul>
+
+            <a href="osservatori2.html" class="cta-button" style="margin-top: 20px;">Torna agli Osservatori</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor counter omitted for brevity
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Sole - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Il Sole</h1>
+        <p class="subtitle">La nostra stella: fonte di vita ed energia.</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Generalità</h2>
+                <div class="content-flex">
+                    <p>Il Sole è una stella di media grandezza e luminosità: nel cielo vi sono innumerevoli altre stelle
+                        di dimensioni più grandi e dotate di brillantezza maggiore. L'unico motivo per cui il Sole ci
+                        appare luminoso e caldo è perché è davvero molto "vicino" al nostro pianeta, rispetto alle
+                        distanze delle altre stelle: la Terra dista infatti mediamente circa 150 milioni di Km dal Sole,
+                        e questa distanza viene percorsa dalla luce in 8 minuti. Il Sole è una sfera di gas
+                        incandescente, essenzialmente costituito da idrogeno ed elio, ed ha un diametro di circa 1,4
+                        milioni di Km, tanto che sarebbero necessari 109 pianeti come la Terra per eguagliarne il
+                        diametro.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Il nucleo del Sole</h2>
+                <img src="../img/image066.gif" alt="Il nucleo del Sole" class="shadow-img"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>Al centro della stella, dove la temperatura raggiunge i 15 milioni di gradi centigradi, si trova il
+                    nucleo. In questa regione avviene il processo di fusione nucleare grazie al quale l'idrogeno si
+                    converte in elio. Nel corso di questa reazione, la materia si trasforma in energia con un ritmo di 4
+                    milioni di tonnellate al secondo. Tuttavia l'energia sprigionata da questa sorta di centrale
+                    nucleare impiega circa 10 milioni di anni a risalire in superficie.</p>
+            </div>
+
+            <div class="card">
+                <h2>L'interno del Sole</h2>
+                <p>L'energia radiante che si diffonde dal nucleo verso l'esterno del Sole sotto forma di raggi X e gamma
+                    viaggia attraverso una regione interna chiamata zona radiativa. Questa è circondata dalla zona di
+                    convezione, all'interno della quale i gas, riscaldati dalla radiazione proveniente dalla zona
+                    sottostante, si espandono salendo verso la superficie del Sole, rilasciando così l'energia
+                    assorbita. In questo modo i gas si raffreddano e, divenuti più densi, ritornano verso il basso,
+                    completando il processo. Questo processo è noto come convezione.</p>
+            </div>
+
+            <div class="card">
+                <h2>La superficie solare</h2>
+                <img src="../img/image067.gif" alt="La superficie solare" class="shadow-img"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>La superficie luminosa del Sole viene chiamata fotosfera; nonostante l'aspetto compatto non è solida,
+                    ma gassosa. Essa segna il confine tra la densa e opaca massa gassosa, che è posta verso il centro
+                    del Sole, e il materiale più sottile e trasparente, che si trova all'esterno. La fotosfera è
+                    condizionata da flussi di gas caldo che salgono verso la superficie e ridiscendono nella zona
+                    convettiva sottostante.</p>
+            </div>
+
+            <div class="card">
+                <h2>La corona solare</h2>
+                <img src="../img/image068.gif" alt="La corona solare" class="shadow-img"
+                    style="max-width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>Lo strato più esterno del Sole è la corona, un involucro costituito da idrogeno molto rarefatto, con
+                    una temperatura che supera il milione di gradi centigradi. Nonostante sia normalmente visibile solo
+                    durante un'eclisse, la corona può essere osservata anche grazie all'impiego di uno strumento
+                    chiamato coronografo. I gas che la costituiscono non sono particolarmente luminosi, ma emettono una
+                    forte quantità di energia sotto forma di raggi X, che può essere facilmente individuata dai
+                    telescopi atti a raccogliere questo tipo di radiazioni.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Il vento solare</h2>
+                <p>Il Sole emette un flusso continuo di particelle ionizzate che si propagano nello spazio in ogni
+                    direzione. Questo flusso, che prende il nome di vento solare, ha un'intensità molto variabile,
+                    generalmente associata alle macchie solari, come per esempio l'orientamento delle code delle comete
+                    opposto alla posizione del Sole. Quando le particelle ionizzate del vento solare raggiungono la
+                    Terra, vengono intrappolate dal campo magnetico del nostro pianeta. Una parte di esse, trascinata
+                    attraverso l'atmosfera, interagisce con i gas che si trovano a una quota di circa 100 Km, e causa
+                    l'emissione di una luce visibile da terra sotto forma di spettacolari e cangianti drappeggi
+                    multicolori, chiamati aurore.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Le macchie solari</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
+                    <img src="../img/image069.jpg" alt="Macchie solari 1" class="shadow-img"
+                        style="max-width: 300px; border-radius: 8px;">
+                    <img src="../img/image070.gif" alt="Macchie solari 2" class="shadow-img"
+                        style="max-width: 300px; border-radius: 8px;">
+                </div>
+                <p>Le forme più interessanti osservabili sul Sole sono le macchie solari, piccole macchie che appaiono
+                    più scure rispetto al resto della fotosfera solo perché hanno una temperatura più bassa. In effetti
+                    le macchie solari hanno una temperatura di "soli" 4000 °C, inferiore ai circa 6000 °C delle zone
+                    circostanti. Possono assumere dimensioni parecchie volte superiori a quelle del nostro pianeta e
+                    sono generate dall'intenso campo magnetico del Sole, che in alcuni punti impedisce la risalita del
+                    calore dall'interno della stella e causa così la formazione di una regione più fredda, e dunque più
+                    scura. In generale la durata di questi fenomeni varia da poche ore a qualche mese. Anche il Sole
+                    ruota sul proprio asse come la Terra e le macchie solari hanno aiutato gli astronomi a scoprire la
+                    velocità di rotazione del Sole. La struttura gassosa del Sole determina una rotazione che viene
+                    definita differenziale: differenti regioni cioè ruotano a velocità diverse, tanto più lentamente
+                    quanto più la zona considerata si trova vicino ai poli della stella. Il periodo di rotazione del
+                    Sole all'equatore è di 25 giorni, mentre ai poli di 34 giorni.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Piero D'Incecco
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

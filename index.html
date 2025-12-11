@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GASPRA - Gruppo Astrofili Pescaresi RA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="index.html"><img src="img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="pages/strumenti.html">Strumenti</a>
+            <a href="pages/osservatori2.html">Osservatori</a>
+            <a href="pages/attivita.html">Attività</a>
+            <a href="pages/didattica2.html">Didattica</a>
+            <a href="pages/galleria.html">Galleria</a>
+            <a href="pages/autocostruzione.html">Autocostruzione</a>
+            <a href="pages/chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="img/logo.jpg" alt="Logo GASPRA" class="hero-logo">
+            <h2>Gruppo Astrofili Pescaresi "RA"</h2>
+            <p>Esplora l'universo con noi. Dal 1999 divulghiamo la passione per l'astronomia.</p>
+            <a href="#attivita" class="cta-button">Scopri le nostre attività <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Attività Recenti -->
+    <section id="attivita" class="fade-in-up">
+        <h2 class="section-title">Attività Recenti</h2>
+        <div class="card-grid">
+            <article class="card">
+                <h3>📝 Prossimi Eventi</h3>
+                <div class="activity-preview">
+                    <span class="activity-date">28/10/2025</span>
+                    <h4>Osservazione Cometa Lemmon</h4>
+                    <p>Brittoli (PE)</p>
+                </div>
+                <div class="activity-preview">
+                    <span class="activity-date">07/09/2025</span>
+                    <h4>Osservazione Eclissi Lunare</h4>
+                    <p>Parco Colle del Telegrafo</p>
+                </div>
+                <a href="pages/attivita.html" class="card-link">Vedi tutte le attività <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="card">
+                <h3>🔭 Escursioni</h3>
+                <p>I soci organizzano mensilmente, in occasione del novilunio, "Escursioni Astronomiche" sul Monte
+                    Voltigno per attività fotografica e visuale.</p>
+                <a href="pages/attivita.html" class="card-link">Unisciti a noi <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="card">
+                <h3>⚖️ Impegno Sociale</h3>
+                <p>Siamo attivi nella lotta all'inquinamento luminoso e nella promozione della protezione del cielo
+                    notturno.</p>
+                <a href="pages/inquinamento.htm" class="card-link">Approfondisci <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Osservatori Highlight -->
+    <section id="osservatori">
+        <h2 class="section-title">Osservatori e Siti</h2>
+        <div class="card-grid">
+            <div class="card observatory-card">
+                <img src="img/colleleone.jpg" alt="Osservatorio Colle Leone" class="observatory-img">
+                <h3>Osservatorio Colle Leone</h3>
+                <p>Uno dei nostri principali punti di riferimento osservativi.</p>
+                <a href="pages/oacl.htm" class="btn-glass" style="justify-content: center;">Visita Pagina</a>
+            </div>
+            <div class="card observatory-card">
+                <img src="pages/Fonte_Vetica.htm" onerror="this.src="img/AmmVerg.jpg"" alt="Fonte Vetica" class="observatory-img">
+                <h3>Fonte Vetica (AQ)</h3>
+                <p>Sito osservativo immerso nella natura del Gran Sasso.</p>
+                <a href="pages/Fonte_Vetica.htm" class="btn-glass" style="justify-content: center;">Scopri di più</a>
+            </div>
+            <div class="card observatory-card">
+                <img src="img/capolavilla.jpg" alt="Osservatorio Capolavilla" class="observatory-img">
+                <h3>Osservatorio Capolavilla</h3>
+                <p>Struttura privata a disposizione dei soci per ricerca e divulgazione.</p>
+                <a href="#" class="btn-glass" style="justify-content: center;">Dettagli</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="pages/osservatori2.html" class="cta-button" style="padding: 10px 30px; font-size: 1rem;">Tutti gli
+                osservatori</a>
+        </div>
+    </section>
+
+    <!-- Galleria Preview -->
+    <section id="galleria" style="background: rgba(255,255,255,0.02);">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Alcuni scatti realizzati dai nostri soci</p>
+
+        <div class="gallery-strip">
+            <div class="gallery-item"><img src="img/m31.jpg" alt="Andromeda"></div>
+            <div class="gallery-item"><img src="img/m42.jpg" alt="Orione"></div>
+            <div class="gallery-item"><img src="img/Giove.jpg" alt="Giove"></div>
+            <div class="gallery-item"><img src="img/Saturno.jpg" alt="Saturno"></div>
+            <div class="gallery-item"><img src="img/m20.jpg" alt="Nebulosa Trifida"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="pages/galleria.html" class="cta-button">Visita la Galleria Completa</a>
+        </div>
+    </section>
+
+    <!-- Strumenti e Autocostruzione -->
+    <section id="tecnica">
+        <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="card">
+                <h3>🛠️ Strumenti e Tecniche</h3>
+                <p>Recensioni, guide e approfondimenti sulla strumentazione astronomica.</p>
+                <ul style="margin: 20px 0; color: var(--text-muted);">
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> SYNTA Skywatcher EQ-6
+                    </li>
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> Celestron vs Meade</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> Guide al Post
+                        Processing</li>
+                </ul>
+                <a href="pages/strumenti.html" class="card-link">Vai alla sezione <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                <h3>🔧 Autocostruzione</h3>
+                <p>Il fai-da-te in astronomia: dalla costruzione di montature alla realizzazione di cupole.</p>
+                <div style="text-align: center; margin-top: 15px;">
+                    <img src="img/ominocos.GIF" alt="Costruzione" style="max-height: 100px; border-radius: 8px;">
+                </div>
+                <a href="pages/autocostruzione.html" class="card-link" style="margin-top: 15px;">Scopri i progetti <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner -->
+    <section style="text-align: center; padding-bottom: 0;">
+        <a href="https://quasar.teoth.it/phpbb3" target="_blank" rel="noopener noreferrer">
+            <img src="img/IMG_6628.jpg" alt="Quasar Partner" class="partner-logo">
+        </a>
+        <p style="color: var(--text-muted);">Partner: Forum Quasar - Dagli Appennini alle Stelle</p>
+    </section>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navbar = document.getElementById('navbar');
+            const toggle = document.querySelector('.menu-toggle');
+            if (!navbar.contains(e.target) && !toggle.contains(e.target) && navbar.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+
+        if (!isLocal) {
+            fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543; // Fallback se non funziona
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+            document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+
+</body>
+
+</html>

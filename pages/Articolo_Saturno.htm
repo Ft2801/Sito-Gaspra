@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturno - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html" class="active">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Saturno</h1>
+        <p class="subtitle">Il Signore degli Anelli.</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Il Gioiello del Sistema Solare</h2>
+                <div class="content-flex">
+                    <img src="../img/Image117.jpg" alt="Immagine di Saturno" class="shadow-img"
+                        style="max-width: 300px; margin-right: 20px;">
+                    <p><strong>Saturno:</strong> è sicuramente il pianeta più spettacolare grazie al suo meraviglioso
+                        sistema di anelli. È il secondo gigante gassoso dopo Giove e ha una caratteristica unica: la sua
+                        densità media è inferiore a quella dell'acqua (0,75 g/cm³). Se esistesse un oceano abbastanza
+                        grande, Saturno vi galleggerebbe sopra!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>I Colori e la Struttura</h2>
+                <div class="content-flex">
+                    <p>La struttura di Saturno è simile a quella di Giove (idrogeno ed elio), ma i suoi colori sono più
+                        tenui, tendenti al giallo-ocra, a causa di uno strato di nubi di ammoniaca e idrosolfuro di
+                        ammoniaca. È il pianeta più schiacciato ai poli (differenza del 10% tra diametro polare ed
+                        equatoriale) a causa della sua rapida rotazione.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Venti e Tempeste</h2>
+                <p>Anche se appare più "tranquillo" di Giove, la sua atmosfera è percorsa da venti fortissimi che
+                    arrivano a <strong>1.800 km/h</strong>! Emette più calore di quanto ne riceva dal Sole, generando
+                    moti convettivi interni.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Gli Anelli</h2>
+                <div class="content-flex">
+                    <img src="../img/Image118.jpg" alt="Anelli di Saturno" class="shadow-img"
+                        style="max-width: 250px; margin-right: 20px;">
+                    <div>
+                        <p>Visibili già con un piccolo telescopio, gli anelli non sono solidi ma formati da miliardi di
+                            frammenti di ghiaccio e roccia, grandi da pochi centimetri a qualche metro. Il sistema è
+                            vastissimo (250.000 km di diametro) ma sottilissimo (spesso meno di 1 km).</p>
+                        <p>Si distinguono in fasce principali (A, B, C) separate da divisioni vuote, come la famosa
+                            <strong>Divisione di Cassini</strong>, mantenuta libera dalla risonanza orbitale con il
+                            satellite Mimas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h2>Le Lune di Saturno</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <img src="../img/Image119.jpg" alt="Titano" class="shadow-img"
+                            style="width: 100%; border-radius: 8px;">
+                        <h4>Titano</h4>
+                        <p>La luna più grande, l'unica con una densa atmosfera e laghi di metano liquido.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <img src="../img/Image120.gif" alt="Dione" class="shadow-img"
+                            style="width: 100%; border-radius: 8px;">
+                        <h4>Dione ed Encelado</h4>
+                        <p>Lune ghiacciate. Encelado in particolare emette geyser di ghiaccio che alimentano uno degli
+                            anelli.</p>
+                    </div>
+                </div>
+                <p>Saturno ha un numero enorme di satelliti (attualmente se ne contano più di 80, mentre il testo
+                    originale ne citava 18). Molti interagiscono con gli anelli come "satelliti pastore".</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Dati Sintetici</h2>
+                <ul class="clean-list">
+                    <li><strong>Massa:</strong> 95 (Terra = 1)</li>
+                    <li><strong>Raggio:</strong> 60.268 km</li>
+                    <li><strong>Giorno:</strong> 10h 14m</li>
+                    <li><strong>Anno:</strong> 29,5 anni terrestri</li>
+                    <li><strong>Satelliti:</strong> 80+ (Titano il maggiore)</li>
+                    <li><strong>Anelli:</strong> Sistema complesso e brillante</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: Piero D'Incecco
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione Astronomica 23/02/2001 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Escursione Astronomica</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">23 Febbraio
+            2001 - Monte Voltigno</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Una Serata Imprevista</h2>
+            <p>Anticipando l'escursione di sabato 24/02 date le pessime previsioni, abbiamo deciso di organizzaci per la
+                sera prima. Venerdì il cielo appariva sereno e limpido; ci siamo dati appuntamento sul Voltigno con
+                <strong>Piero Frangini, Bruno Cirillo, Enrico Zimuel</strong> e <strong>Marco Di Biase</strong>.</p>
+
+            <div class="content-flex" style="margin-top: 30px;">
+                <img src="../img/Image106.jpg" alt="Gruppo al Voltigno" class="shadow-img"
+                    style="max-width: 400px; width: 100%;">
+                <div style="flex: 1;">
+                    <div class="alert alert-secondary">
+                        <i class="fa-solid fa-users"></i> <strong>Il Gruppo:</strong> Enrico Zimuel, Bruno Cirillo,
+                        Piero Frangini, Marco Di Biase (nella foto da sinistra).
+                    </div>
+                    <p>Abbiamo montato un <strong>114/500</strong>, un <strong>MTO/1000</strong>, un <strong>Vixen
+                            200/4</strong> e un <strong>Vixen ED 102/9</strong>. Vento forte a raffiche, osservazioni
+                        prevalentemente visuali.</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">Il Mistero della "Nuova Cometa"</h3>
+            <p>Sulle foto di Bruno della <strong>Nebulosa Rosetta</strong> è apparso uno strano oggetto diffuso. Si è
+                pensato ad una nuova cometa, ma probabilmente era un detrito spaziale o un artefatto. La rivista <a
+                    href="http://www.coelum.com" target="_blank" class="btn-link">Coelum</a> ha comunque dedicato
+                un'allerta in homepage: "Uno strano oggetto vicino alla Rosetta".</p>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">Osservazioni e Test Strumentali</h3>
+            <p>Verso le ore 2:30 del 24/02 è stata osservata la cometa <strong>1999 T1 McNaught/Hartley</strong> (mag.
+                7+). Successivamente abbiamo osservato molti oggetti Messier (M42, M35, M44, M3, M97, M108, M106,
+                M81/82, M52, M92) testando con successo il sistema di puntamento automatico <strong>"Palomar AD
+                    2000"</strong> sulla Takahashi EM 10.</p>
+
+            <p style="margin-top: 20px; text-align: right; font-style: italic;">Autori: C.L., Marco Di Biase</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

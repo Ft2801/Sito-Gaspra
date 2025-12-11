@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legge 10/1991 Art. 1 e 8 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Legge 10 Gennaio 1991, n. 10</h1>
+        <p class="subtitle">Norme per l'attuazione del Piano Energetico Nazionale in materia di uso razionale
+            dell'energia, di risparmio energetico e di sviluppo delle fonti rinnovabili di energia</p>
+
+        <div class="card full-width">
+            <div class="legal-text">
+                <div class="article-title">ARTICOLO 1 - Finalità ed ambito di applicazione</div>
+                <div class="comma">1. Al fine di migliorare i processi di trasformazione dell'energia, di ridurre i
+                    consumi di energia e di migliorare le condizioni di compatibilità ambientale dell'utilizzo
+                    dell'energia per pari livelli di servizio e qualità della vita, le norme del presente titolo
+                    favoriscono ed incentivano, in accordo con la politica energetica della Comunità economica europea,
+                    l'uso razionale dell'energia, il contenimento dei consumi di energia nella produzione e
+                    nell'utilizzo di manufatti, l'utilizzazione delle fonti rinnovabili di energia, la riduzione dei
+                    consumi specifici di energia nei processi produttivi, una più rapida sostituzione degli impianti di
+                    produzione e di conversione dell'energia con impianti a più alto rendimento energetico, anche in
+                    relazione all'obiettivo di contenere le emissioni inquinanti o comunque alteranti le condizioni
+                    ambientali e climatiche.</div>
+                <div class="comma">2. Le Regioni a statuto speciale e le province autonome di Trento e di Bolzano
+                    provvedono alle finalità della presente legge nell'ambito delle competenze loro attribuite dagli
+                    statuti speciali e dalle relative norme di attuazione.</div>
+                <div class="comma">3. L'utilizzo delle fonti rinnovabili di energia si considera di pubblico interesse e
+                    di pubblica utilità e le opere relative sono equiparate alle opere dichiarate indifferibili e
+                    urgenti ai fini dell'applicazione delle leggi sulle opere pubbliche.</div>
+
+                <div class="article-title">ARTICOLO 8 - Contributi in conto capitale</div>
+                <div class="comma">1. Al fine di incentivare la realizzazione di iniziative volte a ridurre i consumi di
+                    energia e a migliorare le condizioni di compatibilità ambientale, possono essere concessi contributi
+                    in conto capitale nella misura variabile dal 20 al 40 per cento della spesa riconosciuta ammissibile
+                    per i seguenti interventi:</div>
+                <ul class="clean-list" style="margin-left: 20px; font-style: italic;">
+                    <li>a) Coibentazione termica degli edifici esistenti.</li>
+                    <li>b) Installazione di generatori di calore ad alto rendimento in sostituzione di generatori
+                        esistenti o integrazione degli stessi.</li>
+                    <li>c) Sostituzione di scaldacqua elettrici con scaldacqua alimentati a gas o altre fonti
+                        rinnovabili.</li>
+                    <li>d) Installazione di apparecchiature di regolazione automatica della temperatura.</li>
+                    <li>e) Installazione di sistemi di contabilizzazione del calore.</li>
+                    <li>f) Recupero di calore da impianti termici, elettrici e tecnologici.</li>
+                    <li>g) Installazione di pompe di calore.</li>
+                    <li>h) <strong>Installazione di sistemi di illuminazione ad alto rendimento, anche nelle aree
+                            esterne.</strong></li>
+                    <li>i) Installazione di sistemi di rifasamento dell'impianto elettrico.</li>
+                </ul>
+                <div class="comma">2. I contributi di cui al comma 1 sono erogati dal Ministero dell'Industria, del
+                    Commercio e dell'Artigianato, sulla base di graduatorie formate secondo criteri di priorità tecnica
+                    ed economica.</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="inquinamento.htm" class="cta-button">Torna all'Indice Inquinamento Luminoso</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+            fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+            document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

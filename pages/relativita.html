@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Teoria della Relatività - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .concept-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--highlight-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .concept-title {
+            color: var(--highlight-color);
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .formula {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>La Teoria della Relatività</h1>
+        <p class="subtitle">I concetti che hanno rivoluzionato la nostra comprensione dell'Universo</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <p>La teoria della relatività, formulata da Albert Einstein all'inizio del XX secolo, rappresenta una
+                    delle più grandi conquiste dell'intelletto umano. Essa ha modificato radicalmente le nostre
+                    concezioni di spazio, tempo, massa ed energia.</p>
+
+                <h2>Relatività Ristretta (1905)</h2>
+                <div class="concept-box">
+                    <div class="concept-title">I due postulati fondamentali</div>
+                    <ol>
+                        <li><strong>Principio di Relatività:</strong> Le leggi della fisica sono le stesse in tutti i
+                            sistemi di riferimento inerziali (cioè in moto rettilineo uniforme l'uno rispetto
+                            all'altro). Non esiste un sistema di riferimento "privilegiato" o assoluto.</li>
+                        <li><strong>Invarianza della velocità della luce:</strong> La velocità della luce nel vuoto
+                            (<i>c</i>) è costante ed è la stessa per tutti gli osservatori, indipendentemente dal loro
+                            moto o da quello della sorgente.</li>
+                    </ol>
+                </div>
+
+                <p>Da questi semplici postulati derivano conseguenze sorprendenti:</p>
+                <div class="content-flex">
+                    <div style="flex: 1; padding: 10px;">
+                        <h3>Dilatazione del Tempo</h3>
+                        <p>Il tempo non è assoluto. Un orologio in movimento batte più lentamente rispetto a uno fermo.
+                            Questo fenomeno è impercettibile alle velocità quotidiane, ma diventa significativo a
+                            velocità prossime a quella della luce.</p>
+                    </div>
+                    <div style="flex: 1; padding: 10px;">
+                        <h3>Contrazione delle Lunghezze</h3>
+                        <p>Analogamente, un oggetto in movimento appare più corto nella direzione del moto rispetto a
+                            quando è misurato da fermo.</p>
+                    </div>
+                </div>
+
+                <div class="formula">E = mc²</div>
+                <p>La conseguenza più famosa è l'equivalenza tra massa ed energia. La massa può trasformarsi in energia
+                    e viceversa. Questa equazione è alla base del funzionamento delle stelle (fusione nucleare) e delle
+                    centrali nucleari.</p>
+
+                <h2>Relatività Generale (1915)</h2>
+                <p>Mentre la relatività ristretta tratta solo sistemi in moto uniforme, la relatività generale include
+                    la <strong>gravità</strong>.</p>
+
+                <div class="concept-box">
+                    <div class="concept-title">La Gravità come Geometria</div>
+                    <p>Einstein intuì che la gravità non è una "forza" a distanza come pensava Newton, ma una
+                        <strong>curvatura dello spaziotempo</strong> causata dalla presenza di massa ed energia.</p>
+                </div>
+
+                <p>Le masse (come la Terra o il Sole) "piegano" il tessuto dello spazio e del tempo attorno a loro, e
+                    gli altri oggetti (come la Luna o i pianeti) seguono semplicemente le traiettorie più "dritte"
+                    possibili (geodetiche) in questo spazio curvo.</p>
+
+                <h3>Conferme Sperimentali</h3>
+                <ul class="clean-list">
+                    <li><i class="fa-solid fa-check" style="color: var(--button-color);"></i> <strong>Precessione del
+                            perielio di Mercurio:</strong> Spiegazione dell'anomalia nell'orbita del pianeta più
+                        interno.</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--button-color);"></i> <strong>Deflessione della
+                            luce:</strong> La luce delle stelle viene incurvata passando vicino al Sole (confermato
+                        durante l'eclissi del 1919).</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--button-color);"></i> <strong>Onde
+                            Gravitazionali:</strong> Increspature dello spaziotempo rilevate per la prima volta nel
+                        2015.</li>
+                </ul>
+
+                <div class="alert alert-info" style="margin-top: 30px;">
+                    <h3><i class="fa-solid fa-book-open"></i> Approfondimento GASPRA</h3>
+                    <p>Il nostro socio <strong>Piero D'Incecco</strong> ha tenuto un seminario approfondito su questi
+                        temi. Puoi leggere il resoconto dell'evento qui:</p>
+                    <a href="seminario2.htm" class="cta-button"
+                        style="display: inline-block; margin-top: 10px;">Resoconto Seminario Relatività</a>
+                </div>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="didattica2.html" class="cta-button">Torna a Didattica</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

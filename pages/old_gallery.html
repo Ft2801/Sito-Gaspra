@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Gallery - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html" class="active">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up" style="max-width: 1400px;"> <!-- Increased max-width for gallery -->
+
+        <div class="gallery-section">
+            <h1 class="gallery-title">Old Gallery</h1>
+            <div class="category-buttons">
+                <button class="category-button" onclick="highlightCategory('nebulose')">Nebulose</button>
+                <button class="category-button" onclick="highlightCategory('galassie')">Galassie</button>
+                <button class="category-button" onclick="highlightCategory('comete')">Comete</button>
+                <button class="category-button" onclick="highlightCategory('ammassi')">Ammassi</button>
+                <a href="new_gallery.html" class="category-button" style="background: var(--accent-color);">Vai alla New
+                    Gallery</a>
+            </div>
+        </div>
+
+        <!-- Sezioni delle categorie -->
+        <div id="nebulose" class="category-section">
+            <h2>Nebulose</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('m17.jpg')">
+                    <div class="photo-title">M 17</div>
+                    <img src="../img/m17.jpg" alt="Foto di una nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 28+28 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m20.jpg')">
+                    <div class="photo-title">M 20</div>
+                    <img src="../img/m20.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton R200SS Vixen @ f/8 su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 50 minuti</p>
+                        <p>FILTRO: Nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m20_mdb.jpg')">
+                    <div class="photo-title">M 20</div>
+                    <img src="../img/m20_mdb.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Meade 2080 @ f/10</p>
+                        <p>PELLICOLA: Scotch chrome 3200</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m27.jpg')">
+                    <div class="photo-title">M 27</div>
+                    <img src="../img/m27.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Celestron 11 @ f/10</p>
+                        <p>PELLICOLA: Fuji 400</p>
+                        <p>ESPOSIZIONE: 35 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Guida fuori asse</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m42.jpg')">
+                    <div class="photo-title">M 42</div>
+                    <img src="../img/m42.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 28+5+1 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m42_mdb.jpg')">
+                    <div class="photo-title">M 42</div>
+                    <img src="../img/m42_mdb.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>STRUMENTO: C 11 @ f/6.3</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ngc6992_5')">
+                    <div class="photo-title">NGC 6992</div>
+                    <img src="../img/ngc6992_5.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 28+28 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ngc7000.jpg')">
+                    <div class="photo-title">NGC 7000</div>
+                    <img src="../img/ngc7000.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 28+28 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ngc7293.jpg')">
+                    <div class="photo-title">NGC 7293</div>
+                    <img src="../img/ngc7293.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 60 minuti</p>
+                        <p>FILTRO: Deep-Sky Celestron</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ic4793.jpg')">
+                    <div class="photo-title">IC 4793</div>
+                    <img src="../img/ic4793.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 28+28 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+
+                <div class="photo-item" onclick="openModal('ic5067.jpg')">
+                    <div class="photo-title">IC 5067</div>
+                    <img src="../img/ic5067.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 30+30 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ic5146.jpg')">
+                    <div class="photo-title">IC 5146</div>
+                    <img src="../img/ic5146.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Forca Canapine</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Fuji NPH 400</p>
+                        <p>ESPOSIZIONE: 25 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('b33.jpg')">
+                    <div class="photo-title">B 33</div>
+                    <img src="../img/b33.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 30+30 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('b72.jpg')">
+                    <div class="photo-title">B 72</div>
+                    <img src="../img/b72.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 30+30 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('Rho.jpg')">
+                    <div class="photo-title">Rho Ophiuchi</div>
+                    <img src="../img/Rho.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Monte Voltigno</p>
+                        <p>STRUMENTO: Obiettivo 180 f/2,8</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 15+15 minuti</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ngc6888_mdb.jpg')">
+                    <div class="photo-title">NGC 6888</div>
+                    <img src="../img/ngc6888_mdb.jpg" alt="Foto di un'altra nebulosa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: C11 @ f/6</p>
+                        <p>PELLICOLA: Fuji 400 ipersensibilizzata</p>
+                        <p>ESPOSIZIONE: 45 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: fuori asse</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="galassie" class="category-section">
+            <h2>Galassie</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('m31.jpg')">
+                    <div class="photo-title">M 31</div>
+                    <img src="../img/m31.jpg" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Fuji NPH 400</p>
+                        <p>ESPOSIZIONE: 30+30 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m51.jpg')">
+                    <div class="photo-title">M 51</div>
+                    <img src="https://www.gaspra.org/m51.jpg" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Celestron 11 @ f/6,3</p>
+                        <p>PELLICOLA: Fuji 400 </p>
+                        <p>ESPOSIZIONE: 25+40 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: fuori asse</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('ngc253.jpg')">
+                    <div class="photo-title">NGC 253</div>
+                    <img src="../img/ngc253.jpg" alt="Foto di una galassia">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Celestron 11 @ f/6,3</p>
+                        <p>PELLICOLA: Fuji 400 </p>
+                        <p>ESPOSIZIONE: 40 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: fuori asse</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="comete" class="category-section">
+            <h2>Comete</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('c1996b2_Hyakutake_25-03-96_mdb.jpg')">
+                    <div class="photo-title">C/1996 B2 Hyakutake</div>
+                    <img src="../img/c1996b2_Hyakutake_25-03-96_mdb.jpg" alt="Foto di una cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: 58mm</p>
+                        <p>PELLICOLA: Kodak Phanter 1600</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1996b2_Hyakutake_14-04-96_mdb.jpg')">
+                    <div class="photo-title">C/1996 B2 Hyakutake</div>
+                    <img src="../img/c1996b2_Hyakutake_14-04-96_mdb.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Maiella (CH)</p>
+                        <p>STRUMENTO: 300mm f/2.8</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1995o1_Hale-Bopp_14-09-96_mdb.jpg')">
+                    <div class="photo-title">C/1995 O1 Hale-Bopp</div>
+                    <img src="../img/c1995o1_Hale-Bopp_14-09-96_mdb.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: C11 @ f/6.3</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1995o1_Hale-Bopp_16-11-96.jpg')">
+                    <div class="photo-title">C/1995 O1 Hale-Bopp</div>
+                    <img src="../img/c1995o1_Hale-Bopp_16-11-96.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Blockhaus (CH)</p>
+                        <p>STRUMENTO: C8 @ f/6.3</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1995o1_Hale-Bopp_06-03-97_mdb.jpg')">
+                    <div class="photo-title">C/1995 O1 Hale-Bopp</div>
+                    <img src="../img/c1995o1_Hale-Bopp_06-03-97_mdb.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: 100mm f/2.8</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1995o1_Hale-Bopp_29-03-97.jpg')">
+                    <div class="photo-title">C/1995 O1 Hale-Bopp</div>
+                    <img src="../img/c1995o1_Hale-Bopp_29-03-97.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Forca Canapine (AP)</p>
+                        <p>STRUMENTO: 135mm f/3.5</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1995o1_Hale-Bopp_05-04-97.jpg')">
+                    <div class="photo-title">C/1995 O1 Hale-Bopp</div>
+                    <img src="../img/c1995o1_Hale-Bopp_05-04-97.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Monte Voltigno</p>
+                        <p>STRUMENTO: 135mm</p>
+                        <p>Pellicola: Fuji SuperG 800</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1995o1_Hale-Bopp_10-04-97_mdb.jpg')">
+                    <div class="photo-title">C/1995 O1 Hale-Bopp</div>
+                    <img src="../img/c1995o1_Hale-Bopp_10-04-97_mdb.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: 180mm f/2.8</p>
+                        <p>PELLICOLA: Fuji 400</p>
+                        <p>ESPOSIZIONE: 13 minuti</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1995o1_Hale-Bopp_13-04-97.jpg')">
+                    <div class="photo-title">C/1995 O1 Hale-Bopp</div>
+                    <img src="../img/c1995o1_Hale-Bopp_13-04-97.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Pesara</p>
+                        <p>STRUMENTO: C8 @ f/40</p>
+                        <p>PELLICOLA: Fuji SuperG 800</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1999h1_Lee.jpg')">
+                    <div class="photo-title">C/1999 H1 Lee</div>
+                    <img src="../img/c1999h1_Lee.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Newton Vixen R200SS</p>
+                        <p>PELLICOLA: Fuji NPH 400</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c1999h1_Lee_mdb.jpg')">
+                    <div class="photo-title">C/1999 H1 Lee</div>
+                    <img src="../img/c1999h1_Lee_mdb.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Baker Schmidt 400 f/2</p>
+                        <p>PELLICOLA: Fuji NPH 400</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c2001a2_Linear.jpg')">
+                    <div class="photo-title">C/2001 A2 Linear</div>
+                    <img src="../img/c2001a2_Linear.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Capracotta</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Fuji NPH 400</p>
+                        <p>ESPOSIZIONE: 15+15 minuti</p>
+                        <p>Filtro: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80 - guida sul nucleo della cometa</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c2002c1_Ikeya-Zhang_mdb.jpeg')">
+                    <div class="photo-title">C/2002 C1 Ikeya-Zhang</div>
+                    <img src="../img/c2002c1_Ikeya-Zhang_mdb.jpeg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: 300mm f/4.5</p>
+                        <p>PELLICOLA: Kodak E200</p>
+                        <p>ESPOSIZIONE: 5 minuti</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('c2002c1_Ikeya-Zhang.jpg')">
+                    <div class="photo-title">C/2002 C1 Ikeya-Zhang</div>
+                    <img src="../img/c2002c1_Ikeya-Zhang.jpg" alt="Foto di un'altra cometa">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Blockhaus (CH)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak E200</p>
+                        <p>ESPOSIZIONE: 8+8 minuti</p>
+                        <p>Filtro: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80 - guida sul nucleo della cometa</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="ammassi" class="category-section">
+            <h2>Ammassi</h2>
+            <div class="photo-container">
+                <div class="photo-item" onclick="openModal('m11.jpg')">
+                    <div class="photo-title">M 11</div>
+                    <img src="../img/m11.jpg" alt="Foto di un altro ammasso">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Rifrattore Vixen semi apo 102 f/9</p>
+                        <p>PELLICOLA: Kodak P 1600</p>
+                        <p>ESPOSIZIONE: 25 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m13.jpg')">
+                    <div class="photo-title">M 13</div>
+                    <img src="../img/m13.jpg" alt="Foto di un altro ammasso">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Maksutov-Cassegrain-Gregory D 240 F 3000 Zen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak E200 sviluppata a 800asa</p>
+                        <p>ESPOSIZIONE: 40 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: fuori asse</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m16.jpg')">
+                    <div class="photo-title">M 16</div>
+                    <img src="../img/m16.jpg" alt="Foto di un ammasso">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Kodak Supra 400</p>
+                        <p>ESPOSIZIONE: 28+28 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m16_mdb.jpg')">
+                    <div class="photo-title">M 16</div>
+                    <img src="../img/m16_mdb.jpg" alt="Foto di un ammasso">
+                    <div class="photo-description">
+                        <p>AUTORE: Marco Di Biase</p>
+                        <p>LOCALITÀ: Fonte Vetica (AQ)</p>
+                        <p>STRUMENTO: Meade 2080 + C 11</p>
+                        <p>PELLICOLA: Fuji 400 ipersensibilizzata</p>
+                        <p>ESPOSIZIONE: 30+30 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+                <div class="photo-item" onclick="openModal('m45.jpg')">
+                    <div class="photo-title">M 45</div>
+                    <img src="../img/m45.jpg" alt="Foto di un ammasso">
+                    <div class="photo-description">
+                        <p>AUTORE: Bruno Cirillo</p>
+                        <p>LOCALITÀ: Monte Voltigno (PE)</p>
+                        <p>STRUMENTO: Newton 200 f/4 Vixen su Losmandy G11</p>
+                        <p>PELLICOLA: Fuji superG 400</p>
+                        <p>ESPOSIZIONE: 28+28 minuti</p>
+                        <p>FILTRO: nessuno</p>
+                        <p>GUIDA: Celestron Firstscope 80</p>
+                    </div>
+                    <button class="toggle-description-btn" onclick="toggleSingleDescription(event, this)">Mostra
+                        Descrizione</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal per la visualizzazione a schermo intero -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <img id="modal-image" src="" alt="Immagine a schermo intero">
+        </div>
+    </div>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Script per le descrizioni e modal
+        function highlightCategory(id) {
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.classList.remove('highlighted');
+            });
+
+            const categorySection = document.getElementById(id);
+            categorySection.classList.add('highlighted');
+
+            const offset = -100;
+            const elementPosition = categorySection.getBoundingClientRect().top + window.pageYOffset + offset;
+
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+
+            setTimeout(() => {
+                categorySection.classList.remove('highlighted');
+            }, 2000);
+        }
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+
+        function toggleSingleDescription(event, button) {
+            // Impedisci che il click si propaghi all'elemento genitore (che apre la modal)
+            event.stopPropagation();
+
+            // Trova la descrizione associata al pulsante
+            const description = button.previousElementSibling;
+
+            // Controlla se la descrizione è visibile o nascosta
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+                button.textContent = 'Nascondi Descrizione';
+            } else {
+                description.style.display = 'none';
+                button.textContent = 'Mostra Descrizione';
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

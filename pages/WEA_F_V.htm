@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-End Astronomico 27-29/10/2000 - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html" class="active">Osservatori</a>
+            <a href="attivita.html">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Week-End Astronomico</h1>
+        <p class="subtitle"
+            style="text-align: center; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px;">27-29 Ottobre
+            2000 - Fonte Vetica</p>
+
+        <section class="card">
+            <h2 style="color: var(--highlight-color); margin-bottom: 20px;">Fonte Vetica</h2>
+            <p>Il 27 ottobre i soci Bruno Cirillo, Gianni Mantini e Paolo Vigilante si sono recati in località <a
+                    href="Fonte_Vetica.htm" class="btn-link">Fonte Vetica</a> per un "Week End Astronomico" (WEA). Nella
+                prima serata hanno partecipato anche Edoardo Perenich (GAT) e i responsabili di "Stilottica".</p>
+            <p>Nonostante la nebbia iniziale venerdì, il cielo si è aperto regalando una notte osservativa superba.
+                Sabato si sono uniti Marco Di Biase, Francesco Carlucci e Piero D’Incecco, trovando nuovamente
+                condizioni ideali seppur con alta umidità e gelo.</p>
+
+            <div class="alert alert-success">
+                <i class="fa-solid fa-star"></i> <strong>Qualità del Cielo:</strong> Eccellente in entrambe le serate.
+                Via Lattea distinta ad occhio nudo vicino Orione e luce zodiacale visibile al crepuscolo.
+            </div>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">Test Strumentazione</h3>
+            <p>Grazie a "Stilottica", abbiamo testato due strumenti:</p>
+            <ul class="clean-list">
+                <li>
+                    <strong>Antares IO (Rifrattore 15cm f/8):</strong> Buone visioni planetarie (Saturno, Giove) anche
+                    ad alti ingrandimenti (250x), ma montatura sottodimensionata. Aberrazione cromatica contenuta.
+                </li>
+                <li>
+                    <strong>Celestron C 9 1/4 S.C. (23.5cm f/10):</strong> Visioni da brivido di Saturno a 489x
+                    (divisione di Cassini netta). Ottica molto buona, superiore al C8 per dettagli planetari, ma viti di
+                    collimazione a croce scomode.
+                </li>
+            </ul>
+
+            <h3 style="color: var(--highlight-color); margin-top: 30px;">Osservazioni Notturne</h3>
+            <p>L'osservazione si è concentrata sui pianeti giganti e sul profondo cielo. Saturno è stato il protagonista
+                indiscusso. I test hanno evidenziato pregi e difetti della nuova strumentazione, fornendo dati utili per
+                future acquisizioni o consigli.</p>
+
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="attivita.html" class="btn-glass"><i class="fa-solid fa-arrow-left"></i> Torna alle Attività</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

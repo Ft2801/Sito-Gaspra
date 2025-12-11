@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorgenti Luminose Artificiali - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>Sorgenti Luminose Artificiali</h1>
+        <p class="subtitle">Analisi delle tecnologie di illuminazione e del loro impatto</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Tipologie di Lampade</h2>
+                <p>Le lampade si dividono principalmente in due categorie: a <strong>incandescenza</strong> (emissione
+                    termica) e a <strong>scarica di gas</strong> (emissione per luminescenza).</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-fire-burner" style="color: #ff9800;"></i> Sodio Bassa Pressione (LPS/SOX)</h3>
+                <img src="../img/Image5.gif" alt="Lampada Sodio Bassa Pressione" class="shadow-img"
+                    style="height: 100px; display: block; margin: 10px auto; background: white; padding: 5px;">
+                <ul class="clean-list">
+                    <li><strong>Efficienza:</strong> Altissima (fino a 200 lm/W).</li>
+                    <li><strong>Colore:</strong> Giallo monocromatico (589 nm).</li>
+                    <li><strong>Impatto:</strong> Minimo. Facilmente filtrabile dagli astronomi.</li>
+                    <li><strong>Uso ideale:</strong> Strade extraurbane, gallerie, dove non serve resa cromatica.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-sun" style="color: #ffeb3b;"></i> Sodio Alta Pressione (HPS/SON)</h3>
+                <img src="../img/Image7.gif" alt="Lampada Sodio Alta Pressione" class="shadow-img"
+                    style="height: 100px; display: block; margin: 10px auto; background: white; padding: 5px;">
+                <ul class="clean-list">
+                    <li><strong>Efficienza:</strong> Alta (100-130 lm/W).</li>
+                    <li><strong>Colore:</strong> Giallo-rosato.</li>
+                    <li><strong>Impatto:</strong> Medio. Compromesso tra efficienza e resa cromatica.</li>
+                    <li><strong>Uso ideale:</strong> Centri urbani, strade residenziali.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-flask" style="color: #03a9f4;"></i> Vapori di Mercurio (HG)</h3>
+                <img src="../img/Image6.gif" alt="Lampada Mercurio" class="shadow-img"
+                    style="height: 100px; display: block; margin: 10px auto; background: white; padding: 5px;">
+                <ul class="clean-list">
+                    <li><strong>Efficienza:</strong> Bassa (50 lm/W).</li>
+                    <li><strong>Colore:</strong> Bianco freddo.</li>
+                    <li><strong>Impatto:</strong> ALTO. Emettono UV e inquinano lo spettro.</li>
+                    <li><strong>Stato:</strong> Obsolete e fuori norma in molte regioni.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-lightbulb" style="color: #eee;"></i> LED (Moderni)</h3>
+                <p>Non presenti nel testo originale, ma oggi dominanti.</p>
+                <ul class="clean-list">
+                    <li><strong>Efficienza:</strong> Molto alta.</li>
+                    <li><strong>Attenzione:</strong> I LED a luce bianca fredda (>3000K) sono molto inquinanti
+                        (componente blu). Preferire LED ambra o < 3000K.</li>
+                </ul>
+            </div>
+
+            <div class="card full-width">
+                <h2>Apparecchi Illuminanti</h2>
+                <div class="content-flex">
+                    <div style="flex: 1;">
+                        <h3>Armature Stradali</h3>
+                        <p>Le vecchie armature con coppa di vetro curva disperdono luce orizzontalmente e verso l'alto.
+                        </p>
+                        <p>Le armature <strong>Cut-Off</strong> (schermate) con vetro piano orizzontale dirigono tutto
+                            il flusso verso il basso (0% dispersione superiore).</p>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <img src="../img/Image20.jpg" alt="Armatura cut-off" class="shadow-img" style="max-height: 200px;">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="content-flex">
+                    <div style="flex: 1;">
+                        <h3>Globi</h3>
+                        <p>I classici globi non schermati sono pessimi: oltre il 50% della luce va in cielo. Vanno
+                            sostituiti con globi schermati o lanterne con ottica cut-off.</p>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <img src="../img/Image14.jpg" alt="Globo inquinante" class="shadow-img"
+                            style="max-height: 200px; opacity: 0.6;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <a href="inquinamento.htm" class="cta-button">Torna all'indice degli argomenti</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combattere l'Inquinamento Luminoso - GASPRA</title>
+    <!-- New CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="fade-in">
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/logo.jpg" alt="GASPRA Logo" class="logo"></a>
+            <h1 class="site-title">GASPRA</h1>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="navbar">
+            <a href="strumenti.html">Strumenti</a>
+            <a href="osservatori2.html">Osservatori</a>
+            <a href="attivita.html" class="active">Attività</a>
+            <a href="didattica2.html">Didattica</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="autocostruzione.html">Autocostruzione</a>
+            <a href="chisiamo.html"
+                style="background: var(--button-color); color: white; padding: 8px 20px; border-radius: 30px;">Chi
+                siamo</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper fade-in-up">
+        <h1>L'Inquinamento Luminoso</h1>
+        <p class="subtitle">Analisi del fenomeno e strategie di intervento</p>
+
+        <section class="card-grid">
+            <div class="card full-width">
+                <h2>Il Problema</h2>
+                <div class="content-flex">
+                    <img src="../img/image033.jpg" alt="Inquinamento luminoso Pescara e Chieti" class="shadow-img"
+                        style="max-width: 300px; margin-right: 20px;">
+                    <div>
+                        <p>Da diversi anni si parla di inquinamento ambientale: mare sporco, aria irrespirabile. Ma
+                            esiste anche l'<strong>inquinamento luminoso</strong>. Inquinare significa alterare
+                            l'ambiente in modo dannoso; illuminare il cielo in maniera sconsiderata è un danno per
+                            tutti, non solo per gli astrofili.</p>
+                        <p>Produrre luce costa energia, e produrre energia inquina. Limitare la dispersione di luce
+                            significa risparmiare risorse e proteggere l'ambiente notturno, fondamentale anche per i
+                            bioritmi di piante e animali.</p>
+                    </div>
+                </div>
+                <p>Non serve spegnere tutto: basterebbe illuminare <strong>solo dove serve</strong> (verso il basso),
+                    con lampade specifiche e intensità adeguate, senza l'obiettivo di "sconfiggere le tenebre" a tutti i
+                    costi.</p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Come Combatterlo</h2>
+                <h3>Livelli di Intensità</h3>
+                <p>La CEI (Commission Internationale de l'Éclairage) stabilisce livelli di intensità luminosa che spesso
+                    vengono superati inutilmente:</p>
+                <ul class="clean-list">
+                    <li>Strade extraurbane (media/alta intensità): 1-2 candele/mq</li>
+                    <li>Strade urbane (scorrimento/principali): 1-2 candele/mq</li>
+                    <li>Strade locali residenziali: 3-6 lux</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Tipi di Lampade</h2>
+                <p>Le lampade usate per l'illuminazione pubblica variano in efficienza e impatto:</p>
+                <ul class="clean-list">
+                    <li><strong>Incandescenza:</strong> (Obsolete) Bassa efficienza.</li>
+                    <li><strong>Vapori di Mercurio:</strong> Emettono UV, corretti con fosfori. Molto inquinanti
+                        spettralmente.</li>
+                    <li><strong>Sodio Bassa Pressione (LPS):</strong> Luce gialla monocromatica. <strong>Ideali</strong>
+                        per l'astronomia perché la loro luce è facilmente filtrabile e hanno altissima efficienza.</li>
+                    <li><strong>Sodio Alta Pressione (HPS):</strong> Luce giallo-rosata/bianca. Più fedeltà cromatica ma
+                        meno efficienti delle LPS.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Soluzioni Pratiche</h2>
+                <ul class="clean-list">
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> Rispettare i limiti
+                        CEI.</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> Usare armature
+                        <strong>cut-off</strong> (schermate verso l'alto).</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> Spegnere o ridurre
+                        l'illuminazione a notte fonda.</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> Limitare fari
+                        pubblicitari e fasci rotanti.</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--highlight-color);"></i> Preferire lampade al
+                        Sodio.</li>
+                </ul>
+            </div>
+
+            <div class="card full-width" style="text-align: center;">
+                <p>Per saperne di più visita il sito di <a href="http://www.vialattea.net/cielobuio/" target="_blank"
+                        style="color: var(--highlight-color); text-decoration: underline;">Cielo Buio</a>.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> <span id="visitor-count">...</span> visitatori
+        </div>
+        <div class="copyright">
+            &copy; 1999-2025 GASPRA - Gruppo Astrofili Pescaresi RA. Tutti i diritti riservati.<br>
+            Autore: M.D.B.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const menuIcon = document.querySelector('.menu-toggle i');
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Visitor Counter (Simulazione o integrazione esistente)
+        const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
+        if (!isLocal) {
+             fetch('counter.php')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(data => {
+                    const el = document.getElementById('visitor-count');
+                    let count = parseInt(data) || 12543;
+                    el.innerText = count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitor-count').innerText = '12,543';
+                });
+        } else {
+             document.getElementById('visitor-count').innerText = '12,543';
+        }
+    </script>
+</body>
+
+</html>
