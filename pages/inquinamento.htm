@@ -44,16 +44,14 @@
                 <div
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
                     <a href="cosa.htm" class="cta-button">
-                        <i class="fa-solid fa-question-circle"
-                            style="font-size: 1.5rem; color: var(--highlight-color);"></i>
+                        <i class="fa-solid fa-question-circle" style="font-size: 1.5rem;"></i>
                         <div>
                             <h4>Cos'è?</h4>
                             <span style="font-size: 0.9em; opacity: 0.8;">Definizione e impatto</span>
                         </div>
                     </a>
                     <a href="come.htm" class="cta-button">
-                        <i class="fa-solid fa-shield-halved"
-                            style="font-size: 1.5rem; color: var(--highlight-color);"></i>
+                        <i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i>
                         <div>
                             <h4>Come affrontarlo</h4>
                             <span style="font-size: 0.9em; opacity: 0.8;">Soluzioni e strategie</span>
@@ -67,15 +65,14 @@
                 <div
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
                     <a href="generali.htm" class="cta-button">
-                        <i class="fa-solid fa-lightbulb" style="font-size: 1.5rem; color: var(--highlight-color);"></i>
+                        <i class="fa-solid fa-lightbulb" style="font-size: 1.5rem;"></i>
                         <div>
                             <h4>Aspetti generali</h4>
                             <span style="font-size: 0.9em; opacity: 0.8;">Grandezze fotometriche</span>
                         </div>
                     </a>
                     <a href="sorgenti.htm" class="cta-button">
-                        <i class="fa-regular fa-lightbulb"
-                            style="font-size: 1.5rem; color: var(--highlight-color);"></i>
+                        <i class="fa-regular fa-lightbulb" style="font-size: 1.5rem;"></i>
                         <div>
                             <h4>Sorgenti luminose</h4>
                             <span style="font-size: 0.9em; opacity: 0.8;">Tipi di lampade artificiali</span>
@@ -114,7 +111,7 @@
         // Visitor Counter (Simulazione o integrazione esistente)
         const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname) || window.location.protocol === 'file:';
         if (!isLocal) {
-             fetch('counter.php')
+            fetch('counter.php')
                 .then(response => {
                     if (!response.ok) throw new Error('Not found');
                     return response.text();
@@ -128,7 +125,7 @@
                     document.getElementById('visitor-count').innerText = '12,543';
                 });
         } else {
-             document.getElementById('visitor-count').innerText = '12,543';
+            document.getElementById('visitor-count').innerText = '12,543';
         }
     </script>
 </body>
